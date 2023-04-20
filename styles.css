@@ -35,7 +35,7 @@ h1, h2, h3, h4{
   font-size: 2rem;
 }
 
-/* -----Header----- */
+/* -----Header All Pages----- */
 header{
   color: var(--white-text-page);
   width: 100%;
@@ -59,9 +59,9 @@ nav a{
   color: var(--white-text-page);
   font-size: 2rem;
 }
-img.logo{
+.logo{
   width: 140px;
-  margin: 13px 35px
+  margin: 13px 35px;
 }
 label{
   float: right;
@@ -81,10 +81,10 @@ label{
   display: block;
 }
 #hamburger-menu:checked ~ a img{
-  display: none;
+  
 }
 
-/* -----Body----- */
+/* -----Body Main Page----- */
 .main-img{
   background-image: url(/pictures/Main-home1.jpg);
   background-size: cover;
@@ -120,7 +120,7 @@ label{
   background-color: var(--white-text-page);
 }
 
-/* -----Body-jackets----- */
+/* -----Jackets Main Page----- */
 .horizontal-jackets__row{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -144,7 +144,8 @@ label{
  gap: 2px;
 }
 .horizontal-jackets__container::active{
-
+  width: 80vh;
+  height: 50vh;
 }
 .jacket-img{
   max-width: 214px;
@@ -181,7 +182,7 @@ label{
   text-decoration: line-through;
 }
 
-/* -----Body-text----- */
+/* -----Body Text Main Page----- */
 .home-text {
   margin: 30px 0;
 }
@@ -193,7 +194,7 @@ label{
 }
 
 
-/* -----Body-Gender-part----- */
+/* -----Body Gender Main Page----- */
 .gender{
   display: flex;
   flex-direction: column;
@@ -232,9 +233,7 @@ label{
 }
 
 
-
-
-/* -----Sign up----- */
+/* -----Sign Up Main Page----- */
 .sign-up{
   background-image: url(/pictures/subscribe.jpg);
   background-size: cover;
@@ -262,7 +261,7 @@ label{
   box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
 }
 
-/*----- Footer----- */
+/*----- Footer All Pages----- */
 footer{
   background: var(--grey);
   box-shadow: 0px -8px 9px -8px rgba(112, 124, 140, 0.7);
@@ -291,23 +290,21 @@ footer nav a {
   clear: both;
 }
 
-/* -----About Page----- */
+/* -----About Page Small Version----- */
+.about__content{
+  display: none;
+}
 .about-main{
   background-image: url(/pictures/small_about.jpg);
   display: inline-block;
   width: 100%;
   height: 470px;
+  margin-bottom: 15px;
   background-size: cover;
   background-position-x: left;
   background-position-y: bottom;
+  box-shadow: 0px 7px 8px rgba(0,0,0,0.25);
 }
-.about__content{
-  display: none;
-}
-.p-cta{
-  margin-top: 30px;
-}
-/* -----About Page Small Version----- */
 .about-sm-quote, .about-sm-header_content{
   position: absolute;
   transform: translate(-50%, -50%);
@@ -315,33 +312,43 @@ footer nav a {
   font-size: 2rem;
 }
 .about-sm-header_content{
-  top: 25%;
+  top: 120px;
   left: 50%;
 }
 .about-sm-quote{
-  width: 20px;
-  top: 70%;
+  width: 110px;
+  top: 320px;
   left: 80%;
-}
-.about-sm{
-  width: 100%;
-  margin: 20px 0px;
-  text-align: center;
-  background-color: var(--grey);
-  color: var(--white-text-page);
 }
 #about-sm-header{
   text-decoration: underline;
+  margin-bottom: 7px;
 }
+.about-sm__content{
+  width: 89%;
+  margin: 0 auto;
+  padding: 10px 17px 40px 17px;
+  font-size: var(--size-text-header-footer);
+  color: var(--white-text-page);
+  text-align: center;
+  line-height: 138%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+  border-radius: 3px;
+  background-color: var(--grey);
+}
+.about-cta{
+  margin-top: 30px;
+} 
 
 /*----- List of Jackets Page -----*/
 .main-list-img{
-  background-image: url(/pictures/Special-page.jpg);
+  background-image: url(/pictures/small_special-page.jpg);
   background-size: cover;
+  background-position: center center;
   min-height: 356px;
   width: 100%;
   display: inline-block;
-  margin: 70px 0px 20px 0px;
+  margin: 80px 0px 20px 0px;
   position: relative;
 }
 .main-list__content{
@@ -365,7 +372,6 @@ footer nav a {
 
 /* -----Contact Page----- */
 .contact-headers{
-  margin: 15px 0px;
   text-align: center;
 }
 .h1-grey{
@@ -377,7 +383,7 @@ footer nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 600px;
+  max-width: 600px;
   margin: var(--margin-page);
   float: left;
 }
@@ -386,32 +392,32 @@ footer nav a {
   max-height: 350px;
 }
 .contact-field{
-  display: flex;
-  flex-direction: column;
-
+  margin: 0 auto;
+  border: #313131 2px solid ;
+  float: right;
+  max-width: 500px;
+  margin: var(--margin-page);
 }
 form{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 500px;
 }
-.row{
+.input{
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  flex-basis: 48%;
+  flex-wrap: wrap;
 }
 input, select, textarea{
   border: 1px solid black;
   border-radius: 4px;
   padding: 6px 10px;
   font-size: var(--form-text);
-  margin-bottom: px;
 }
 label{
-  margin-bottom: 2px;
-}
-input{
-  margin-bottom: 12px
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 textarea{
   height: 70px;
@@ -487,14 +493,17 @@ textarea{
     align-items: center;
     height: 50px;
   }
-  img.logo{
+  .main-header{
+  }
+  .logo{
+    background-image: url(/pictures/Logo-white.png);
     width: 150px;
     position: absolute;
     top: 30%;
     left: 48%;
     transform: translate(-50%, -50%);
     }
-  a img{
+  .icons a img{
     padding-right: 0px;
     margin-right: 35px;
     margin-top: 0px;
@@ -620,9 +629,6 @@ textarea{
   line-height: 30px;
   padding: 0 35px ;
 }
-.p-cta{
-  margin-top: 30px;
-} 
 .about-footer{
   background: var(--grey);
   position: absolute;
@@ -638,13 +644,13 @@ textarea{
 
 /* ----List of jackets page---- */
   .main-list-img{
+    background-image: url(/pictures/Special-page.jpg);
     margin: 115px 35px 20px 35px;
     width: calc(100% - 70px);
     background-position-x: bottom;
     background-position-y: center;
   }
 }
-
 
 
 
@@ -681,7 +687,7 @@ textarea{
 
 
 @media (max-width:446px){
-  .cta-discover{
+  .gender .cta-discover{
     display: none;
   }
   .icons{

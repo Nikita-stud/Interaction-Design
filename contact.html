@@ -15,27 +15,29 @@
 
 
 <body>
-  <header class="no-scroll">
+  <header>
     <section class="dark-header">
       <p>Sale up to 20%</p>
     </section>
     <section class="lower-header">
-      <nav class="main-header">
-        <ul>
-          <li><a href="index.html" class="active">Home</li>
-          <li><a href="#">Deals</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Man</a></li>
-          <li><a href="#">Kids</a></li>
-        </ul>
-        <img src="pictures/Logo-white.png" class="logo" alt="Logo of the page"/>
-        <ul>
-          <li><a href="#"><img src="/pictures/Icons-profile.png"></a></li>
-          <li><a href="#"><img src="/pictures/Icons-bag.png"></a></li>
-          <li><a href="#"><img src="/pictures/Icons-search.png"></a></li>
-        </ul>
-      </nav>
-    </section>
+      <label for="hamburger-menu"><i class="fa-sharp fa-solid fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu"/>
+      <img onclick="location.href='index.html';" src="pictures/Logo-white.png" href="index.html" class="logo" alt="Logo of the page"/></a>
+        <nav class="main-header">
+          <ul>
+            <li class="header-text"><a href="index.html">Home</li>
+            <li class="header-text"><a href="#">Deals</a></li>
+            <li class="header-text"><a href="#">Women</a></li>
+            <li class="header-text"><a href="#">Man</a></li>
+            <li class="header-text"><a href="#">Kids</a></li>
+          </ul>
+        </nav>
+        <div class="icons">
+          <a href="#"><img src="/pictures/Icons-profile.png"></a>
+          <a href="#"><img src="/pictures/Icons-bag.png"></a>
+          <a href="#"><img src="/pictures/Icons-search.png"></a>
+        </div>
+      </section>
   </header>
 
 
@@ -56,51 +58,45 @@
     <section class="contact-field">
       <h1 class="h1-grey">Contact Our Team</h1>
       <div class="line"></div>
-      <form action="#" method="post"></form>
-        <div class="row">
-          <div class="input"></div>
-            <label type="fname">First name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-            <input type="text" id="fname" name="first-name" placeholder="Please enter" required>
-          </div>
-          <div class="input"></div>
-            <label type="lname">Last name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-            <input type="text" id="lname" name="last-name" placeholder="Please enter" required>
-          </div>
-        </div>
+
+      <form action="#" method="post">
         <div class="input">
-          <label type="mail">Email address <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-          <input type="email" id="mail" name="email" placeholder="Please enter" required>
+          <label type="fname">First name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+          <input type="text" id="fname" name="first-name" placeholder="Please enter" required>
+          <label type="lname">Last name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+          <input type="text" id="lname" name="last-name" placeholder="Please enter" required>
         </div>
-        <div class="input">
-          <label type="subject">Subject <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-          <input type="text" id="subject" name="subject" placeholder="What is it about?" required>
-        </div>
-        <div class="input">
-          <label type="message">Message <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-        </div>
+
+        <label type="mail">Email address <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+        <input type="email" id="mail" name="email" placeholder="Please enter" required>
+        <label type="subject">Subject <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+        <input type="text" id="subject" name="subject" placeholder="What is it about?" required>
+        <label type="message">Message <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
         <input type="submit" value="Send in" class="cta-send">
       </form>
+
     </section>
   </main>
 
 
 
   <footer> 
-      <nav>
-        <img src="/pictures/Logo-white.png" alt="Logo of the website" class="logo-footer"/>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of use</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <ul>
-          <li><a href="#" alt="Facebook page"><img src="pictures/Facebook-icon.png"/></a></li>
-          <li><a href="#" alt="Instagram page"><img src="pictures/Insta-icon.png"/></a></li>
-          <li><a href="#" alt="Twitter page"><img src="pictures/Twitter-icon.png"/></a></li>
-          <li><a href="#" alt="LinkedIn page"><img src="pictures/LinkedIN-icon.png"/></a></li>
-        </ul>
-      </nav>
+    <img onclick="location.href='index.html';" src="/pictures/Logo-white.png" alt="Logo of the website" class="footer-logo"/>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-icons">
+        <a href="#" alt="Facebook page"><img src="pictures/Facebook-icon.png"/></a>
+        <a href="#" alt="Instagram page"><img src="pictures/Insta-icon.png"/></a>
+        <a href="#" alt="Twitter page"><img src="pictures/Twitter-icon.png"/></a>
+        <a href="#" alt="LinkedIn page"><img src="pictures/LinkedIN-icon.png"/></a>
+    </div>
   </footer>
 </body>
 </html>
