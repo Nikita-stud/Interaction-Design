@@ -46,28 +46,38 @@
     </section>
 
 
-
     <section class="map">
       <h1 class="h1-grey">Our location</h1>
       <div class="line"></div>
-      <h1 class="h1-grey">Grey Wedels Plass 5, 0151 Oslo</h1>
-      <img src="#" alt="Location of rainydays shop">
+      <h1 class="h1-grey"><i class="fa-solid fa-location-dot"></i>Grey Wedels Plass 5, 0151 Oslo</h1>
+      <img src="/pictures/Location-img.jpg" alt="Location of rainydays shop">
     </section>
 
     <section class="contact-field">
       <h1 class="h1-grey">Contact Our Team</h1>
       <div class="line"></div>
       <form action="#" method="post"></form>
-        <label type="fname">First name</label>
-        <input type="text" id="fname" name="first-name" placeholder="Please enter" required>
-        <label type="lname">Last name</label>
-        <input type="text" id="lname" name="last-name" placeholder="Please enter" required>
-        <label type="mail">Email address</label>
-        <input type="email" id="mail" name="email" placeholder="Please enter" required>
-        <label type="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="What is it about?" required>
-        <label type="message">Message</label>
-        <textarea id="message" name="message">How may we be of help?</textarea>
+        <div class="row">
+          <div class="input"></div>
+            <label type="fname">First name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+            <input type="text" id="fname" name="first-name" placeholder="Please enter" required>
+          </div>
+          <div class="input"></div>
+            <label type="lname">Last name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+            <input type="text" id="lname" name="last-name" placeholder="Please enter" required>
+          </div>
+        </div>
+        <div class="input">
+          <label type="mail">Email address <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+          <input type="email" id="mail" name="email" placeholder="Please enter" required>
+        </div>
+        <div class="input">
+          <label type="subject">Subject <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+          <input type="text" id="subject" name="subject" placeholder="What is it about?" required>
+        </div>
+        <div class="input">
+          <label type="message">Message <i class="fa-sharp fa-regular fa-asterisk"></i></label>
+        </div>
         <input type="submit" value="Send in" class="cta-send">
       </form>
     </section>
