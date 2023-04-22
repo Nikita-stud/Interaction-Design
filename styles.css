@@ -43,7 +43,7 @@ header{
   color: var(--white-text-page);
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 .dark-header{
   background-color: #313131;
@@ -101,6 +101,7 @@ label{
   display: inline-block;
   margin: 40px 0px 10px 0px;
   position: relative;
+  z-index: 0;
 }
 .main-img__content{
   color: var(--white-text-page);
@@ -375,7 +376,7 @@ footer nav a {
 
 
 /* -----Contact Page----- */
-.h1-grey{
+.h1-grey, .h2-grey{
   text-align: center;
   color: var(--grey);
 }
@@ -439,7 +440,7 @@ textarea{
 
 /*----- Checkout Success Page -----*/
 .success-png{
-  background-image: url(/pictures/Checkout-scs.png);
+  background-image: url(/pictures/Checkout-scs.png);;
   margin: 0 auto;
   width: 131px;
   height: 131px;
@@ -447,19 +448,27 @@ textarea{
 .success__content{
   text-align: center;
 }
+.line-success-top{
+  display: none;
+}
 .order{
   margin: 35px 35px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.grid-title{
+  font: 1.4rem bold;
+}
 .order__content{
   display: grid;
-  grid-template-columns: repeat(3,200px);
+  float: right;
+  grid-template-columns: repeat(3,110px);
   grid-template-rows: 40px 150px;
   align-items: center;
   text-align: center;
+  margin-top: 30px;
   border: 1px solid var(--grey);
 }
 #success-cta{
@@ -467,34 +476,95 @@ textarea{
   margin-bottom: 30px;
 }
 
+
 /*----- Jackets Special Page -----*/
 .popup{
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
   max-width: 1000px;
-  max-height: 700px;
+  max-height: 1800px;
   position: absolute;
-  top: 50%;
+  top: 82%;
   left: 50%;
   transform: translate(-50%,-50%);
   background-color: #FFF;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
 }
+.popup:target{
+  opacity: 1;
+  visibility: visible;
+}
 .jacket-img-popup{
-  width: 51%;
+  width: 100%;
   height: 100%;
-  float: left;
+  clear: both;
   background-color: #F2F2F2;
   background: linear-gradient(268.62deg, rgba(102, 126, 76, 0.17) 0.97%, rgba(102, 126, 76, 0) 102.64%); 
   display: flex;
   flex-direction: column;
 }
 .popup p{
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .sp__cta{
-  display: flex;
-  justify-content: space-around;
+  align-items: center;
+  line-height: 40px;
 }
+.close{
+  position: absolute;
+  top: 2%;
+  left: 84%;
+  transform: translate(-50%,-50%);
+}
+.close i{
+  font-size: 2rem;
+  color: #313131;
+}
+
+/* ----- My Bag Page----- */
+.bag{
+  max-width: 858px;
+  max-height: 521px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+}
+.bag__content{
+  display: flex;
+  flex-direction: column;
+  
+}
+.bag__content::after{
+  clear: both;
+  content: "";
+  display: table;
+}
+.bag img{
+  float: left;
+  max-height: 274px;
+  max-width: 312px;
+  border: 1px solid rgba(128, 128, 128, 0.444);
+  margin-left: 15px;
+}
+
+.order-summary{
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  max-width: 293px;
+  max-height: 618px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+}
+.order-summary__content{
+
+}
+
+
+
+
 
 
 
@@ -790,9 +860,47 @@ label{
 textarea{
   height: 76px;
 }
+
+
+/*----- Jackets Special Page -----*/
+.popup{
+  z-index: 1000;
+  opacity: 0;
+  max-height: 700px;
+  position: fixed;
+  top: 50%;
+}
+.jacket-img-popup{
+  width: 51%;
+  clear: none;
+  float: left;
+}
+.popup p{
+  margin-top: 10px;
+}
+.sp__cta{
+  line-height: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.close{
+  left: 94%;
 }
 
 /*----- Checkout Success Page -----*/
+.line-success-top{
+  display: block;
+  margin: 30px 35px;
+}
+.order{
+  flex-direction: row;
+}
+.order__content{
+  grid-template-columns: repeat(3,200px);
+}
+
+}
+
 
 
 
@@ -941,4 +1049,24 @@ textarea{
   width: calc(100% - 70px);
   border-radius: 80% ;
   opacity: 0.2;
+}
+.line-success-top{
+  background-color: var(--grey);
+  width: 100%;
+  height: 7px;
+  width: calc(100% - 70px);
+  border-radius: 80% ;
+  opacity: 0.2;
+}
+.btn-size{
+  display: inline;
+  color: var(--grey);
+  padding: 5px 30px;
+  font-size: 1.0625rem;
+  border: 3px solid var(--grey);
+  border-radius: 40px;
+}
+.btn-size:hover{
+  background-color: rgba(162, 161, 161, 0.449);
+  border: 4px solid var(--grey);
 }
