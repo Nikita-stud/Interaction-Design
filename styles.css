@@ -12,6 +12,11 @@
   padding: 0;
   background-repeat: no-repeat;
 }
+.body-small{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 main{
   background-color: var(--white-text-page);
  }
@@ -66,7 +71,7 @@ nav a{
   width: 140px;
   margin: 13px 35px;
 }
-label{
+header label{
   float: right;
   padding: 22px 35px 22px 3px;
   font-size: 30px;
@@ -271,7 +276,7 @@ footer{
   box-shadow: 0px -8px 9px -8px rgba(112, 124, 140, 0.7);
   width: 100%;
   height: 80px;
-  margin-top: 25px;
+  margin-top: 0px;
   font-size: var(--size-text-header-footer);
 }
 .footer-nav{
@@ -380,61 +385,109 @@ footer nav a {
   text-align: center;
   color: var(--grey);
 }
+.question{
+  margin-top: 20px;
+}
 .main-flex{
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
+  align-items: baseline;
 }
+.main-flex > *{
+  flex: 1;
+}
+
 .map{
-  border: #313131 2px solid ;
   align-items: center;
-  display: inline-block;
   max-width: 600px;
-  margin: 35px 35px;
-  clear: both;
+  margin: 35px 0px;
 }
 .map img{
-  max-width: 500px;
-  max-height: 350px;
+  width: 100%;
+  max-height: 400px;
+}
+.h1-grey i{
+  font-size: 1.6rem;
 }
 
 .contact-field{
-  margin: 35px 35px;
-  border: #313131 2px solid ;
-  width: 100%;
-  max-width: 501px;
-}
-form{
-  width: 100%;
-  max-width: 500px;
+  max-width: 561px;
 }
 .input-section{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+}
+.input-section > *{
+  flex: 1;
 }
 input, textarea{
-  margin-top: -20px;
   border: 1px solid black;
   border-radius: 4px;
   padding: 6px 10px;
   font-size: var(--form-text);
 }
 label{
-  display: block;
-  font-size: 1.3rem;
+  margin-top: 10px;
+  padding: 4px;
+  font-size: 1.1rem;
   font-weight: bold;
-  margin-top: 0px;
-}
-textarea{
-  height: 76px;
 }
 
 /* -----Checkout----- */
-.checkout-img{
-  width: 200px;
-  height: 300px;
+.shipping-field, .payment-field{
+  max-width: 500px;
+  min-height: 439px;
+  margin:30px 0px;
+  padding: 15px;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
 }
+
+.order-section{
+ display: grid;
+ place-items: center;
+ margin: 0 0 30px 0;
+}
+.order-field{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 40px;
+  align-items: center;
+  max-height: 919px;
+  max-width: 435px;
+  padding: 15px;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+}
+
+.input-section__half{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-section__half > *{
+  
+}
+
+.input-section__half-section{
+}
+
+.checkout-img{
+  padding: 10px;
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  border: 1px rgba(128, 128, 128, 0.23) solid;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -526,9 +579,12 @@ textarea{
 
 /* ----- My Bag Page----- */
 .bag{
-  max-width: 858px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 758px;
   max-height: 521px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 .bag__content{
   display: flex;
@@ -551,10 +607,12 @@ textarea{
 .order-summary{
   display: flex;
   flex-direction: column;
+  line-height: 65px;
   font-size: 2rem;
   max-width: 293px;
   max-height: 618px;
   padding: 10px;
+  margin-top: 60px;
   border-radius: 4px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
 }
@@ -621,7 +679,9 @@ textarea{
    
 
 
-
+@media (min-width:841px) and (max-width: 1162){
+  
+}
 
 
 @media (min-width:840px){
@@ -808,58 +868,7 @@ textarea{
 
 
   /* -----Contact Page----- */
-.main-flex{
-  display: flex;
-  justify-content: space-between;
-}
-.h1-grey{
-  text-align: center;
-  color: var(--grey);
-}
 
-.map{
-  border: #313131 2px solid ;
-  align-items: center;
-  display: inline-block;
-  max-width: 600px;
-  margin: 35px 35px;
-}
-.map img{
-  max-width: 500px;
-  max-height: 350px;
-}
-
-.contact-field{
-  margin: 35px 35px;
-  border: #313131 2px solid ;
-  width: 100%;
-  max-width: 501px;
-}
-form{
-  width: 100%;
-  max-width: 500px;
-}
-.input-section{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-input, textarea{
-  margin-top: -20px;
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-size: var(--form-text);
-}
-label{
-  display: block;
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-top: 0px;
-}
-textarea{
-  height: 76px;
-}
 
 
 /*----- Jackets Special Page -----*/
@@ -996,7 +1005,7 @@ textarea{
   border: 2px solid var(--white-text-page);
   border-radius: 40px;
 }
-.cta-add{
+.cta-add,  .cta-order{
   display: inline;
   color: var(--grey);
   padding: 5px 63.5px;
@@ -1021,6 +1030,14 @@ textarea{
   border: 2px solid var(--grey);
   border-radius: 40px;
 }
+.cta-order{
+  color: var(--grey);
+  background-color: rgba(16, 182, 16, 0.522);
+  padding: 5px 63.5px;
+  font-size: 1.0625rem;
+  border: 2px solid var(--grey);
+  border-radius: 40px;
+}
 .cta-sign-up{
   display: none;
   padding: 6px 45px;
@@ -1035,11 +1052,16 @@ textarea{
 .cta-send{
   color: var(--grey);
   background-color: #fff;
-  margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+  margin: 20px 0px;
   padding: 5px 65px;
   font-size: 1.0625rem;
   border: 2px solid var(--grey);
   border-radius: 40px;
+}
+.cta-send:hover{
+  background-color: rgba(193, 188, 188, 0.429);
+  border: 2px solid rgb(97, 97, 97);
 }
 .line{
   background-color: var(--grey);
