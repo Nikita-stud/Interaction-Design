@@ -88,9 +88,6 @@ header label{
   float: right;
   display: block;
 }
-#hamburger-menu:checked ~ a img{
-  
-}
 
 /* -----Body Main Page----- */
 .main-img{
@@ -492,8 +489,12 @@ label{
 
 
 /*----- Checkout Success Page -----*/
-.success-png{
-  background-image: url(/pictures/Checkout-scs.png);;
+.success{
+  position: relative;
+  top:100px;
+}
+.success__circle{
+  background-image: url(/pictures/Checkout-scs.png);
   margin: 0 auto;
   width: 131px;
   height: 131px;
@@ -501,18 +502,25 @@ label{
 .success__content{
   text-align: center;
 }
-.line-success-top{
+.success-line-top{
   display: none;
 }
-.order{
-  margin: 35px 35px;
+.finished-order{
+  margin: 105px 35px 30px 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.grid-title{
+.table__title{
   font: 1.4rem bold;
+  border: 2px solid grey;
+  padding: 10px;
+}
+.table__content{
+  width: 160px;
+  border: 2px solid grey;
+  padding: 20px;
 }
 .order__content{
   display: grid;
@@ -524,7 +532,7 @@ label{
   margin-top: 30px;
   border: 1px solid var(--grey);
 }
-#success-cta{
+#success-button{
   text-align: center;
   margin-bottom: 30px;
 }
@@ -579,16 +587,21 @@ label{
 
 /* ----- My Bag Page----- */
 .bag{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   max-width: 758px;
   max-height: 521px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
-.bag__content{
+.bag__frame{
   display: flex;
   flex-direction: column;
+}
+.bag i{
+  font-size: large;
+}
+.bag__content{
+  margin-top: 30px;
+  line-height: 40px;
   
 }
 .bag__content::after{
@@ -601,7 +614,7 @@ label{
   max-height: 274px;
   max-width: 312px;
   border: 1px solid rgba(128, 128, 128, 0.444);
-  margin-left: 15px;
+  margin: 35px 35px;
 }
 
 .order-summary{
@@ -611,8 +624,8 @@ label{
   font-size: 2rem;
   max-width: 293px;
   max-height: 618px;
-  padding: 10px;
-  margin-top: 60px;
+  padding: 15px;
+  margin: 60px 0px;
   border-radius: 4px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
 }
@@ -897,9 +910,17 @@ label{
 }
 
 /*----- Checkout Success Page -----*/
-.line-success-top{
+.success{
+  position: none;
+  top:0px;
+}
+.success-line-top{
   display: block;
   margin: 30px 35px;
+}
+.finished-order{
+  margin: 35px 35px;
+  flex-direction: row;
 }
 .order{
   flex-direction: row;
@@ -946,6 +967,11 @@ label{
 
 
 @media (max-width:446px){
+  #hamburger-menu:checked ~ nav{
+    margin: -5px;
+    margin-right: -65px;
+    padding: 20px 60px;
+  }
   .gender .cta-discover{
     display: none;
   }
@@ -964,6 +990,7 @@ label{
 /*-----Footer -----*/
    .footer-icons{
     flex-direction: column;
+    margin: 0px 35px;
     padding-top:23px ;
     gap: 8px;
   }
@@ -1030,6 +1057,16 @@ label{
   border: 2px solid var(--grey);
   border-radius: 40px;
 }
+.cta-checkout{
+  display: block;
+  text-align: center;
+  background-color: #eaeaea;
+  color: var(--grey);
+  padding: 1px 63.5px;
+  font-size: 1.625rem;
+  border: 3px solid var(--grey);
+  border-radius: 40px;
+}
 .cta-order{
   color: var(--grey);
   background-color: rgba(16, 182, 16, 0.522);
@@ -1072,7 +1109,7 @@ label{
   border-radius: 80% ;
   opacity: 0.2;
 }
-.line-success-top{
+.success-line-top{
   background-color: var(--grey);
   width: 100%;
   height: 7px;
