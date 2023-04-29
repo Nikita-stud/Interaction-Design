@@ -65,11 +65,11 @@ header{
   }
 nav a{
   color: var(--white-text-page);
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .logo{
   width: 140px;
-  margin: 13px 35px;
+  margin: 13px 0 13px 35px;
 }
 header label{
   float: right;
@@ -333,7 +333,7 @@ footer nav a {
 }
 .about-sm__content{
   width: 89%;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   padding: 10px 17px 40px 17px;
   font-size: var(--size-text-header-footer);
   color: var(--white-text-page);
@@ -348,7 +348,7 @@ footer nav a {
 } 
 
 /*----- List of Jackets Page -----*/
-.main-list-img{
+.main-list__img{
   background-image: url(/pictures/small_special-page.jpg);
   background-size: cover;
   background-position: center center;
@@ -378,13 +378,18 @@ footer nav a {
 
 
 /* -----Contact Page----- */
-.h1-grey, .h2-grey{
-  text-align: center;
-  color: var(--grey);
-}
-.question{
-  margin-top: 20px;
-}
+
+
+
+
+
+
+
+
+
+
+
+/* -----Checkout----- */
 .main-flex{
   display: flex;
   justify-content: space-around;
@@ -393,45 +398,6 @@ footer nav a {
 .main-flex > *{
   flex: 1;
 }
-
-.map{
-  align-items: center;
-  max-width: 600px;
-  margin: 35px 0px;
-}
-.map img{
-  width: 100%;
-  max-height: 400px;
-}
-.h1-grey i{
-  font-size: 1.6rem;
-}
-
-.contact-field{
-  max-width: 561px;
-}
-.input-section{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.input-section > *{
-  flex: 1;
-}
-input, textarea{
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-size: var(--form-text);
-}
-label{
-  margin-top: 10px;
-  padding: 4px;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-/* -----Checkout----- */
 .shipping-field, .payment-field{
   max-width: 500px;
   min-height: 439px;
@@ -586,6 +552,14 @@ label{
 }
 
 /* ----- My Bag Page----- */
+.bag-main-flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.bag-main-flex > *{
+  flex: 1;
+}
 .bag{
   text-align: center;
   max-width: 758px;
@@ -689,11 +663,31 @@ label{
     width: 200px;
   }
 }
-   
 
 
-@media (min-width:841px) and (max-width: 1162){
+@media (min-width: 1131px){
+
+  /* -----Header----- */
+  .logo{
+    background-image: url(/pictures/Logo-white.png);
+    width: 150px;
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    }
+
+  nav a{
+    font-size: 2rem;
+    }
+  }
   
+
+
+@media (max-width: 1162){
+
+/* -----Contact Page----- */
+ 
 }
 
 
@@ -722,17 +716,10 @@ label{
   }
   .main-header{
   }
-  .logo{
-    background-image: url(/pictures/Logo-white.png);
-    width: 150px;
-    position: absolute;
-    top: 30%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-    }
+  
   .icons a img{
     padding-right: 0px;
-    margin-right: 35px;
+    margin-right: 32px;
     margin-top: 0px;
   }
   nav li,a{
@@ -833,7 +820,7 @@ label{
   position: absolute;
 }
 .about-main{
-  background-image: url(/pictures/About.jpg);
+  background-image: url(/pictures/about.jpg);
   position: relative;
   margin-bottom: 0px;
   width: 100%;
@@ -871,8 +858,8 @@ label{
 }
 
 /* ----List of jackets page---- */
-  .main-list-img{
-    background-image: url(/pictures/Special-page.jpg);
+  .main-list__img{
+    background-image: url(/pictures/special-page.jpg);
     margin: 115px 35px 20px 35px;
     width: calc(100% - 70px);
     background-position-x: bottom;
@@ -880,9 +867,58 @@ label{
   }
 
 
-  /* -----Contact Page----- */
+/* -----Contact Page----- */
+.h1-grey, .h2-grey{
+  text-align: center;
+  color: var(--grey);
+}
+.question{
+  margin-top: 20px;
+}
+.contact-flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.contact-flex > *{
+  flex: 1;
+}
+.map{
+  align-items: center;
+  max-width: 600px;
+  margin: 35px 0px;
+}
+.map img{
+  width: 100%;
+  max-height: 400px;
+}
+.h1-grey i{
+  font-size: 1.6rem;
+}
 
-
+.contact-field{
+  max-width: 561px;
+}
+.input-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.input-section > *{
+  flex: 1;
+}
+input, textarea{
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: var(--form-text);
+}
+label{
+  margin-top: 10px;
+  padding: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 
 /*----- Jackets Special Page -----*/
 .popup{
@@ -973,9 +1009,6 @@ label{
     padding: 20px 60px;
   }
   .gender .cta-discover{
-    display: none;
-  }
-  .icons{
     display: none;
   }
   .horizontal-jackets__row{
