@@ -513,7 +513,7 @@ footer nav a {
   max-width: 1000px;
   max-height: 1800px;
   position: absolute;
-  top: 82%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%,-50%);
   background-color: #FFF;
@@ -534,16 +534,16 @@ footer nav a {
   flex-direction: column;
 }
 .popup p{
-  margin-top: 5px;
+  margin-top: 3px;
 }
-.sp__cta{
+.popup__cta{
   align-items: center;
   line-height: 40px;
 }
 .close{
   position: absolute;
   top: 2%;
-  left: 84%;
+  left: 94%;
   transform: translate(-50%,-50%);
 }
 .close i{
@@ -926,23 +926,24 @@ label{
   opacity: 0;
   max-height: 700px;
   position: fixed;
-  top: 50%;
+  top: 60%;
 }
 .jacket-img-popup{
-  width: 51%;
-  clear: none;
+  width: 50%;
+  height: 65vh;
   float: left;
 }
 .popup p{
   margin-top: 10px;
 }
-.sp__cta{
-  line-height: 0;
+.popup__cta{
+  line-height: 15px;
   display: flex;
   justify-content: space-around;
 }
 .close{
-  left: 94%;
+  top:20px;
+  left: 96%;
 }
 
 /*----- Checkout Success Page -----*/
