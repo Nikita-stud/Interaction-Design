@@ -377,7 +377,66 @@ footer nav a {
 }
 
 
+
+
+
+
+
+
+
+
 /* -----Contact Page----- */
+.h1-grey, .h2-grey{
+  text-align: center;
+  color: var(--grey);
+}
+.question{
+  display: none;
+}
+.contact-flex{
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+  margin: 0 auto;
+}
+.map{
+  width: 568px;
+  align-items: center;
+  margin: 0 auto;
+  margin: 35px 0px;
+}
+.map img{
+  width: 100%;
+  max-height: 400px;
+}
+.h1-grey i{
+  font-size: 1.6rem;
+}
+
+.contact-field{
+  max-width: 561px;
+}
+.input-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.input-section > *{
+  flex: 1;
+}
+/* -----Contact Page and Checkout Success Page----- */
+input, textarea{
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: var(--form-text);
+}
+label{
+  margin-top: 10px;
+  padding: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 
 
 
@@ -662,6 +721,13 @@ footer nav a {
   .logo-footer{
     width: 200px;
   }
+  /* -----Contact Page----- */
+  .contact-flex{
+    margin: 50px 0 30px 0;
+  }
+  .cta-send{
+    width: 100%;
+  }
 }
 
 
@@ -680,11 +746,28 @@ footer nav a {
   nav a{
     font-size: 2rem;
     }
+  /* -----Contact Page----- */
+  .question{
+    display: contents;
+    margin-top: 20px;
   }
+  .contact-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .contact-flex > *{
+    flex: 1;
+  }
+  .map{
+    max-width: 600px;
+  }
+    }
   
 
 
-@media (max-width: 1162){
+@media (max-width: 1130px){
 
 /* -----Contact Page----- */
  
@@ -865,60 +948,6 @@ footer nav a {
     background-position-x: bottom;
     background-position-y: center;
   }
-
-
-/* -----Contact Page----- */
-.h1-grey, .h2-grey{
-  text-align: center;
-  color: var(--grey);
-}
-.question{
-  margin-top: 20px;
-}
-.contact-flex{
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-}
-.contact-flex > *{
-  flex: 1;
-}
-.map{
-  align-items: center;
-  max-width: 600px;
-  margin: 35px 0px;
-}
-.map img{
-  width: 100%;
-  max-height: 400px;
-}
-.h1-grey i{
-  font-size: 1.6rem;
-}
-
-.contact-field{
-  max-width: 561px;
-}
-.input-section{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.input-section > *{
-  flex: 1;
-}
-input, textarea{
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-size: var(--form-text);
-}
-label{
-  margin-top: 10px;
-  padding: 4px;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
 
 /*----- Jackets Special Page -----*/
 .popup{
