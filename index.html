@@ -2,6 +2,7 @@
 <html lang="en-US">
 <head>
   <title>RAINYDAYS | Home Page</title>
+  <meta name="description" content="The best place to find jackets and sweaters that are durable and comfy"/>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,10 +27,10 @@
         <nav class="main-header">
           <ul>
             <li class="header-text"><a href="index.html" class="active">Home</li>
-            <li class="header-text"><a href="#">Deals</a></li>
-            <li class="header-text"><a href="#">Women</a></li>
-            <li class="header-text"><a href="#">Man</a></li>
-            <li class="header-text"><a href="#">Kids</a></li>
+            <li class="header-text"><a href="list-of-jackets.html">Deals</a></li>
+            <li class="header-text"><a href="list-of-jackets.html">Women</a></li>
+            <li class="header-text"><a href="list-of-jackets.html">Man</a></li>
+            <li class="header-text"><a href="list-of-jackets.html">Kids</a></li>
           </ul>
         </nav>
         <div class="icons">
@@ -44,10 +45,11 @@
     <!-- Invisible popup - only visible when pressing on the jackets (no Javascript)-->
     <section>
       <div class="popup" id="popup">
-        <img src="/pictures/RainyDays_Jacket4.png" class="jacket-img-popup" alt="Black biker jacket"/>
+        <img src="/pictures/RainyDays_Jacket4.png" class="popup__img" alt="Black biker jacket"/>
+        <div class="popup__content">
         <h1>Scott</h1>
         <a href="#" class="close"><i class="fa-solid fa-xmark"></i></a>
-        <p><strong>Black biker edition 2021 & Sea life Marine</strong></p>
+        <p>Black biker edition 2021 & Sea life Marine</p>
         <p>Black biker is one of the most wanted pieces of our collection. Made and tested by our warehouses in Nepal. Highly affordable and durable.
           Rain resistant, wind and tear strong.</p>
         <p>True to size, 10% Cotton 90% Nylon</p>
@@ -55,8 +57,9 @@
           Inner zips that are reachable without opening the jacket. Possibilities to detach the inner layer for warmer weathers </p>
         <p class="jackets-price"><span class="sale-price">899kr</span> 799,00 kr</p>
         <div class="popup__cta">
-          <p><a href="/bag.html" class="cta-buy-sp">Buy now</a></p>
-          <p><a href="#" class="cta-add-sp">Add to bag</a></p>
+          <p><a href="/bag.html" class="popup__cta-buy">Buy now</a></p>
+          <p><a href="#" class="popup__cta-add">Add to bag</a></p>
+        </div>
         </div>
       </div>
     </section>
@@ -168,13 +171,13 @@
     </section>
 
    <section class="gender">
-    <section class="man">
+    <section class="man" onclick="location.href='list-of-jackets.html';">
       <div class="man__content">
         <h3>Men</h3>
         <p><a href="list-of-jackets.html" class="cta-discover">Discover our Collection</a></p>
       </div>
     </section>
-    <section class="women">
+    <section class="women" onclick="location.href='list-of-jackets.html';">
       <div class="women__content">
         <h3>Women</h3>
         <p><a href="list-of-jackets.html" class="cta-discover">Discover our Collection</a></p>

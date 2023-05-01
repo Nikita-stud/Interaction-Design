@@ -551,28 +551,26 @@ label{
   opacity: 0;
   visibility: hidden;
   transition: all 1s;
-  max-width: 1000px;
-  max-height: 1800px;
+  min-width: 280px;
+  max-height: 800px;
   position: absolute;
   top: 90%;
   left: 50%;
   transform: translate(-50%,-50%);
   background-color: #FFF;
   text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5)
 }
 .popup:target{
   opacity: 1;
   visibility: visible;
 }
-.jacket-img-popup{
+.popup__img{
   width: 100%;
-  height: 100%;
+  max-height: 332px;
   clear: both;
   background-color: #F2F2F2;
   background: linear-gradient(268.62deg, rgba(102, 126, 76, 0.17) 0.97%, rgba(102, 126, 76, 0) 102.64%); 
-  display: flex;
-  flex-direction: column;
 }
 .popup p{
   margin-top: 3px;
@@ -581,9 +579,13 @@ label{
   align-items: center;
   line-height: 40px;
 }
+.popup__cta-buy, .popup__cta-add{
+  display: block;
+  margin: 10px 15px;
+}
 .close{
   position: absolute;
-  top: 2%;
+  top: 2.5%;
   left: 94%;
   transform: translate(-50%,-50%);
 }
@@ -979,24 +981,38 @@ label{
 
 /*----- Jackets Special Page -----*/
 .popup{
+  width: 70%;
   z-index: 1000;
   opacity: 0;
-  max-height: 700px;
   position: fixed;
-  top: 60%;
+  top: 50%;
+  min-height: 390px;
+  overflow: hidden;
 }
-.jacket-img-popup{
+.popup__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.popup__img{
   width: 50%;
-  height: 65vh;
+  min-height: 390px;
+  height: 100%;
   float: left;
 }
 .popup p{
-  margin-top: 10px;
+  display: block;
+  margin-top: 4px;
 }
 .popup__cta{
-  line-height: 15px;
+  position: bottom;
   display: flex;
   justify-content: space-around;
+}
+.popup__cta-buy, .popup__cta-add{
+  display: inline;
+  margin: 0px 0px;
 }
 .close{
   top:20px;
@@ -1037,7 +1053,6 @@ label{
 
 
 @media (min-width: 447px) and (max-width:714px){
-  
   .horizontal-jackets__row{
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
@@ -1131,11 +1146,10 @@ label{
   border: 2px solid var(--grey);
   border-radius: 40px;
 }
-.cta-add-sp, .cta-buy-sp{
-  display: inline;
+.popup__cta-add, .popup__cta-buy{
   color: var(--grey);
   background-color: #F2F2F2;
-  padding: 5px 33.5px;
+  padding: 5px 31.5px;
   font-size: 1.0625rem;
   border: 3px solid var(--grey);
   border-radius: 40px;
@@ -1190,6 +1204,7 @@ label{
 .cta-send:hover{
   background-color: rgba(193, 188, 188, 0.429);
   border: 2px solid rgb(97, 97, 97);
+  cursor: pointer;
 }
 .line{
   background-color: var(--grey);
@@ -1219,4 +1234,5 @@ label{
 .btn-size:hover{
   background-color: rgba(162, 161, 161, 0.449);
   border: 4px solid var(--grey);
+  cursor: pointer;
 }
