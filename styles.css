@@ -135,7 +135,7 @@ header label{
   grid-template-columns: 1fr 1fr 1fr;
   overflow-x:none ;
   align-items: top;
-  margin-top: 50px;
+  margin-top: 0px;
   padding: 0 20px;
   gap: 20px;
 }
@@ -1058,9 +1058,8 @@ label{
 @media (min-width: 447px) and (max-width:714px){
   .horizontal-jackets__row{
     grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
-    padding: 0 100px;
-    gap: 10px;
+    place-items: center;
+    padding: 0 5px;
      } 
   /*----- List of jackets page -----*/
   .list-jackets{
@@ -1089,9 +1088,7 @@ label{
   }
   .horizontal-jackets__row{
     grid-template-columns: 1fr;
-    align-self: auto;
-    margin-left: 10%;
-    margin-top: 0px;
+    place-items: center;
      }
    #email{
     padding: 4px 100px 4px 9px;
