@@ -417,7 +417,7 @@ footer nav a {
 .input-section > *{
   flex: 1;
 }
-/* -----Contact Page and Checkout Success Page----- */
+/* -----Contact Page and Checkout Page----- */
 input, textarea{
   border: 1px solid black;
   border-radius: 4px;
@@ -430,30 +430,21 @@ label{
   font-size: 1.1rem;
   font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* -----Checkout----- */
-
+/* -----Checkout Page----- */
 .checkout-flex{
   display: grid;
   place-items: center;
 }
 
 .shipping-field, .payment-field{
-  width: 500px;
+
   min-height: 439px;
   margin:15px 0px;
   padding: 15px;
   box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+}
+.shipping-field{
+  margin-top: 115px;
 }
 
 .order-section{
@@ -468,17 +459,13 @@ label{
   line-height: 40px;
   align-items: center;
   max-height: 919px;
-  width: 500px;
+  min-width: 300px;
+  max-width: 500px;
   margin: 15px 0;
   padding: 15px;
   box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
 }
 
-.input-section__half{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .checkout-img{
   padding: 10px;
   margin-top: 10px;
@@ -577,6 +564,10 @@ label{
 }
 .popup p{
   margin-top: 3px;
+}
+.popup__price{
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 .popup__cta{
   align-items: center;
@@ -719,7 +710,6 @@ label{
 
 
 @media (min-width: 1131px){
-
   /* -----Header----- */
   .logo{
     background-image: url(/pictures/Logo-white.png);
@@ -741,7 +731,7 @@ label{
   .contact-flex{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
   }
   .contact-flex > *{
@@ -750,53 +740,41 @@ label{
   .map{
     max-width: 600px;
   }
-  /* -----Checkout----- */
+  /* -----Checkout Page----- */
   .checkout-flex{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
   }
   .checkout-flex > *{
-    flex: 1;
+    flex: 0;
   }
+  
   .shipping-field, .payment-field{
-    max-width: 500px;
+    margin: 0;
+    min-width: 350px;
     min-height: 439px;
-    margin:30px 0px;
     padding: 15px;
     box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
   }
-
+  .shipping-field{
+    margin-left: 35px;
+  }
+  .payment-field{
+    margin: 0 25px;
+  }
   .order-section{
-   display: grid;
-   place-items: center;
-   margin: 0 0 30px 0;
+   margin-right: 35px;
   }
   .order-field{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 40px;
-    align-items: center;
-    max-height: 919px;
-    max-width: 435px;
-    padding: 15px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+    min-width: 300px;
+  }
+  /* -----Jackets Special Page----- */
+  .popup p{
+    font-size: 1.2rem;
   }
 
-  .input-section__half{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .checkout-img{
-    padding: 10px;
-    margin-top: 10px;
-    width: 200px;
-    height: 200px;
-    border: 1px rgba(128, 128, 128, 0.23) solid; 
-  }
-     }
+    }
   
 
 
@@ -861,9 +839,6 @@ label{
     width: 100%;
     top: 80%;
   }
-  .horizontal-jackets__container{
-    max-width: 234px;
-   }
    .horizontal-jackets__row{
     display: flex;
     margin-top: 18px;
@@ -984,6 +959,7 @@ label{
 
 /*----- Jackets Special Page -----*/
 .popup{
+  display: flex;
   width: 70%;
   z-index: 1000;
   opacity: 0;
@@ -1000,13 +976,16 @@ label{
 }
 .popup__img{
   width: 50%;
-  min-height: 390px;
+  min-height: 420px;
   height: 100%;
   float: left;
 }
 .popup p{
   display: block;
-  margin-top: 4px;
+  margin-top: 0px;
+}
+.popup__price {
+  font-size: 1.6rem;
 }
 .popup__cta{
   position: bottom;
@@ -1020,6 +999,11 @@ label{
 .close{
   top:20px;
   left: 96%;
+}
+
+/*----- Checkout Page -----*/
+.shipping-field{
+  margin-top: 35px;
 }
 
 /*----- Checkout Success Page -----*/
@@ -1056,6 +1040,7 @@ label{
 
 
 @media (min-width: 447px) and (max-width:714px){
+   /*----- Home page -----*/
   .horizontal-jackets__row{
     grid-template-columns: 1fr 1fr;
     place-items: center;
@@ -1065,6 +1050,8 @@ label{
   .list-jackets{
    justify-content: space-around;
     }
+  /*----- Checkout page -----*/
+
 }
 
 

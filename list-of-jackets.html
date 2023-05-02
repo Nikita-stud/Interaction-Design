@@ -52,135 +52,153 @@
 
     <div class="line"></div>
 
-    <section>
-      <div class="popup" id="popup">
-        <img src="/pictures/RainyDays_Jacket4.png" class="jacket-img-popup" alt="Black biker jacket"/>
-        <h1>Scott</h1>
-        <a href="#" class="close"><i class="fa-solid fa-xmark"></i></a>
-        <p><strong>Black biker edition 2021 & Sea life Marine</strong></p>
-        <p>Black biker is one of the most wanted pieces of our collection. Made and tested by our warehouses in Nepal. Highly affordable and durable.
-          Rain resistant, wind and tear strong.</p>
-        <p>True to size, 10% Cotton 90% Nylon</p>
-        <p>Black and grey options available. 
-          Inner zips that are reachable without opening the jacket. Possibilities to detach the inner layer for warmer weathers </p>
-        <div class="circles">
-          <span class="dot"></span>
-          <span class="dot"></span>
+      <!-- Invisible popup - only visible when pressing on the jackets (no Javascript)-->
+      <section>
+        <div class="popup" id="popup">
+          <img src="/pictures/RainyDays_Jacket4.png" class="popup__img" alt="Black biker jacket"/>
+          <div class="popup__content">
+          <h1>Scott</h1>
+          <a href="#" class="close"><i class="fa-solid fa-xmark"></i></a>
+          <p>Black biker edition 2021 & Sea life Marine</p>
+          <p>Black biker is one of the most wanted pieces of our collection. Made and tested by our warehouses in Nepal. Highly affordable and durable.
+            Rain resistant, wind and tear strong.</p>
+          <p>True to size, 10% Cotton 90% Nylon</p>
+          <p>Black and grey options available. 
+            Inner zips that are reachable without opening the jacket. Possibilities to detach the inner layer for warmer weathers </p>
+          <p class="popup__price"><span class="sale-price">899kr</span> 799,00 kr</p>
+          <div class="popup__cta">
+            <p><a href="/bag.html" class="popup__cta-buy">Buy now</a></p>
+            <p><a href="#" class="popup__cta-add">Add to bag</a></p>
+          </div>
+          </div>
         </div>
-        <p class="jackets-price"><span class="sale-price">899kr</span> 799,00 kr</p>
-        <div class="sp__cta">
-          <p><a href="/bag.html" class="cta-buy-sp">Buy now</a></p>
-          <p><a href="#" class="cta-add-sp">Add to bag</a></p>
-        </div>
-      </div>
       </section>
 
     <section class="list-jackets">
-      <div class="horizontal-jackets__container" onclick="location.href='#popup';">
-        <img src="/pictures/RainyDays_Jacket2.png" class="jacket-img" alt="Black cobra jacket"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">Black cobra mountain edition 2022 & NAVY</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        <p class="jackets-price">999,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
-      </div>
-
-      <div class="horizontal-jackets__container" onclick="location.href='#popup';">
-        <img src="/pictures/RainyDays_Jacket4.png" class="jacket-img" alt="Black biker jacket"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">Black biker edition 2021 & Sea life Marine</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        <p class="jackets-price"><span class="sale-price">899kr</span> 799,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
-      </div>
-
-      <div class="horizontal-jackets__container" onclick="location.href='#popup';">
-        <img src="/pictures/RainyDays_Jacket7.png" class="jacket-img" alt="Bruel cobra sweater"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">High density cobra sweater edition 2022 & Bruel</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        <p class="jackets-price">499,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
-      </div>
-
-      <div class="horizontal-jackets__container" onclick="location.href='#popup';">
-        <img src="/pictures/RainyDays_Jacket5.png" class="jacket-img" alt="Grey jacket"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">Rain jacket grey edition 2021 & Greyon</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div> 
-        <p class="jackets-price"><span class="sale-price">1200kr</span> 899,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
-      </div>
-
-      <div class="horizontal-jackets__container" onclick="location.href='#popup';">
-        <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        <p class="jackets-price">1499,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
-      </div>
-
-      <div class="horizontal-jackets__container" onclick="location.href='#popup';">
-        <img src="/pictures/RainyDays_Jacket3.png" class="jacket-img" alt="Red jacket"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">Explicit red silicon neon edition 2022 & Figi</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>       
-        <p class="jackets-price">699,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
+      <div class="horizontal-jackets__container">
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket5.png" class="jacket-img" alt="Grey jacket"/>
+          <p class="jackets-title">Scott</p>
+          <p class="jackets-text">Rain jacket grey edition 2021 & Greyon</p>
+            <div class="circles">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div> 
+          <p class="jackets-price"><span class="sale-price">1200kr</span> 899,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
       </div>
 
       <div class="horizontal-jackets__container">
-        <img src="/pictures/RainyDays_Jacket6.png" class="jacket-img" alt="Raincoat extra protection"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">Raincoat extra protection edition 2021 & Gnite</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        <p class="jackets-price">999,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
-      </div>
-      <div class="horizontal-jackets__container">
-        <img src="/pictures/RainyDays_Jacket2.png" class="jacket-img" alt="Black cobra jacket"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">Black cobra mountain edition 2022 & NAVY</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        <p class="jackets-price">999,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition"/>
+          <h3 class="jackets-title">Scott</h3>
+          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
+            <div class="circles">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          <p class="jackets-price">1499,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
       </div>
 
       <div class="horizontal-jackets__container">
-        <img src="/pictures/RainyDays_Jacket4.png" class="jacket-img" alt="Black biker jacket"/>
-        <p class="jackets-title">Scott</p>
-        <p class="jackets-text">Black biker edition 2021 & Sea life Marine</p>
-          <div class="circles">
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        <p class="jackets-price"><span class="sale-price">899kr</span> 799,00 kr</p>
-        <p><a href="#" class="cta-add">Add to bag</a></p>
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket3.png" class="jacket-img" alt="Red jacket"/>
+          <h3 class="jackets-title">Scott</h3>
+          <p class="jackets-text">Explicit red silicon neon edition 2022 & Figi</p>
+            <div class="circles">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>       
+          <p class="jackets-price">699,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
+      </div>
+
+      <div class="horizontal-jackets__container">
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket2.png" class="jacket-img" alt="Black cobra jacket"/>
+          <h3 class="jackets-title">Scott</h3>
+          <p class="jackets-text">Black cobra mountain edition 2022 & NAVY</p>
+            <div class="circles">
+             <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          <p class="jackets-price">999,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
+      </div>
+
+      <div class="horizontal-jackets__container">
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket4.png" class="jacket-img" alt="Black biker jacket"/>
+          <h3 class="jackets-title">Scott</h3>
+          <p class="jackets-text">Black biker edition 2021 & Sea life Marine</p>
+            <div class="circles">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          <p class="jackets-price"><span class="sale-price">899kr</span> 799,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
+      </div>
+
+      <div class="horizontal-jackets__container">
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket7.png" class="jacket-img" alt="Bruel cobra sweater"/>
+          <h3 class="jackets-title">Scott</h3>
+          <p class="jackets-text">High density cobra sweater edition 2022 & Bruel</p>
+            <div class="circles">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          <p class="jackets-price">499,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
+      </div>
+
+      <div class="horizontal-jackets__container">
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition"/>
+          <h3 class="jackets-title">Scott</h3>
+          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
+            <div class="circles">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          <p class="jackets-price">1499,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
+      </div>
+
+      <div class="horizontal-jackets__container">
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket5.png" class="jacket-img" alt="Grey jacket"/>
+          <p class="jackets-title">Scott</p>
+          <p class="jackets-text">Rain jacket grey edition 2021 & Greyon</p>
+            <div class="circles">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div> 
+          <p class="jackets-price"><span class="sale-price">1200kr</span> 899,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
+      </div>
+
+      <div class="horizontal-jackets__container">
+        <a href="#popup">
+          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition"/>
+          <h3 class="jackets-title">Scott</h3>
+          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
+            <div class="circles">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          <p class="jackets-price">1499,00 kr</p>
+        </a>
+        <a href="#" class="cta-add">Add to bag</a>
       </div>
 
       <div class="horizontal-jackets__container">
