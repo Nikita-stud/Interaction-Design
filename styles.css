@@ -393,7 +393,7 @@ footer nav a {
   margin: 0 auto;
 }
 .map{
-  width: 568px;
+  width: 560px;
   align-items: center;
   margin: 0 auto;
   margin: 35px 0px;
@@ -407,7 +407,7 @@ footer nav a {
 }
 
 .contact-field{
-  max-width: 561px;
+  max-width: 550px;
 }
 .input-section{
   width: 100%;
@@ -1056,6 +1056,13 @@ label{
   .order-field{
     width: 400px;
   }
+  /*----- Contact page -----*/
+  .map{
+    width: 500px;
+  }
+  .contact-field{
+    max-width: 500px;
+  }
 
 }
 
@@ -1070,6 +1077,7 @@ label{
 
 
 @media (max-width:446px){
+  /*----- Home page -----*/
   #hamburger-menu:checked ~ nav{
     margin: -5px;
     margin-right: -65px;
@@ -1106,6 +1114,14 @@ label{
  /*----- List of jackets page -----*/
    .list-jackets{
     justify-content: space-around;
+  }
+  /*----- Contact page -----*/
+  .map{
+    max-width: 400px;
+    margin: 25px 0px;
+  }
+  .contact-field{
+    max-width: 400px;
   }
 }
 
