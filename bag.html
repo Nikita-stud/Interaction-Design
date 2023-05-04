@@ -57,12 +57,28 @@
                 <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><span class="reviews">(129)</span></p>
               </div>
             <p class="jackets-text">Black biker edition 2021 & Sea life Marine</p>
-            <div class="btn__choice">
-              <a href="#" class="btn-size">M</a>
-              <a href="#" class="btn-size">L</a>
-              <a href="#" class="btn-size">XL</a>
-              <a href="#" class="btn-size">XXL</a>
-            </div>
+            <form action="#" method="post">
+              <div>
+                <input type="radio" id="size-small" name="sizes"/>
+                <label for="size-small" class="btn-size">S</label>
+                <input type="radio" id="size-medium" name="sizes"/>
+                <label for="size-medium" class="btn-size">M</label>
+                <input type="radio" id="size-large" name="sizes"/>
+                <label for="size-large" class="btn-size">L</label>
+                <input type="radio" id="size-xl" name="sizes"/>
+                <label for="size-xl" class="btn-size">XL</label>
+                <input type="radio" id="size-xxl" name="sizes"/>
+                <label for="size-xxl" class="btn-size">XXL</label>
+              </div>
+              <div class="amount">
+                <label for="amount">Quantity</label>
+                <select name="amount" id="amount" class="cta_quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </form>
           </div>
         </div>
       </section>
