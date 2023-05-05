@@ -1117,10 +1117,10 @@ label{
   }
   /*----- Contact page -----*/
   .map{
-    width: 500px;
+    width: 480px;
   }
   .contact-field{
-    max-width: 500px;
+    max-width: 480px;
   }
 
 }
@@ -1176,11 +1176,11 @@ label{
   }
   /*----- Contact page -----*/
   .map{
-    max-width: 400px;
+    max-width: 380px;
     margin: 25px 0px;
   }
   .contact-field{
-    max-width: 400px;
+    max-width: 380px;
   }
 }
 
