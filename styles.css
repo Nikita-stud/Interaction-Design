@@ -28,7 +28,7 @@ main{
   --grey: rgb(89, 97, 107);
   --grey-header-footer: rgba(112, 124, 140, 0.7);
   --white-text-page: #F9FAF5;
-  --white-text-stronger: #f3f3f3;
+  --white-text-stronger: #d7d4dd;
   --margin-page: 0 35px;
   --price-size: 1rem bold;
   --jacket-title-size: 1.3rem;
@@ -884,6 +884,7 @@ label{
   }
   .main-img__content{
     text-align: center;
+    line-height: 50px;
     width: 100%;
     top: 82%;
   }
