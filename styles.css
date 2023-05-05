@@ -876,6 +876,7 @@ label{
   }
 
   .main-img{
+    filter: contrast(90%);
     min-height: 536px;
     top: 20px;
     margin: 115px 35px 30px 35px;
