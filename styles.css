@@ -28,7 +28,7 @@ main{
   --grey: rgb(112, 124, 140);
   --grey-header-footer: rgba(112, 124, 140, 0.7);
   --white-text-page: #F9FAF5;
-  --white-text-stronger: #f5f6ff;
+  --white-text-stronger: #f9ffee;
   --margin-page: 0 35px;
   --price-size: 1rem bold;
   --jacket-title-size: 1.3rem;
@@ -47,6 +47,9 @@ a{
 }
 h1, h2, h4, h5, h6{
   font-size: 2rem;
+}
+.span__empty{
+  display: none;
 }
 
 /* -----Header All Pages----- */
