@@ -263,7 +263,7 @@ header label{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#email{
+#email, #code{
   padding: 4px 200px 4px 9px;
   border-radius: 15px;
   border-style: none;
@@ -592,12 +592,18 @@ label{
 .bag-main-flex{
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: center;
 }
 .bag-main-flex > *{
   flex: 1;
 }
+.bag-promo-flex{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 .bag{
+  position: relative;
   text-align: center;
   max-width: 758px;
   max-height: 521px;
@@ -610,10 +616,23 @@ label{
 .bag i{
   font-size: large;
 }
+.bag__jackets-title{
+  text-decoration: underline;
+}
+.bag__jackets-price, .bag__shipping-time, .bag__jackets-text{
+  font-size: 1.2rem;
+  display: inline-block;
+  text-align: center;
+}
+.bag__shipping-time{
+  position: absolute;
+  top: 78%;
+  width: 150px;
+  line-height: 25px;
+}
 .bag__content{
   margin-top: 30px;
   line-height: 40px;
-  
 }
 .bag__content::after{
   clear: both;
@@ -627,6 +646,26 @@ label{
   border: 1px solid rgba(128, 128, 128, 0.444);
   margin: 35px 35px;
 }
+
+.promo-code{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  max-width: 758px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.promo-code__form{
+  position: relative;
+}
+.promo-code__form::after{
+  clear: both;
+  content: "";
+  display: table;
+}
+.h3-bag{
+  font-size: 1.8rem;
+}
+
 .order-summary{
   display: flex;
   flex-direction: column;
@@ -639,7 +678,7 @@ label{
   border-radius: 4px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
 }
-.amount{
+.order-amount{
   border: #313131 2px solid;
   border-radius: 20px;
   display: inline;
@@ -1092,7 +1131,7 @@ label{
     grid-template-columns: 1fr;
     place-items: center;
      }
-   #email{
+   #email, #code{
     padding: 4px 100px 4px 9px;
      }
 /*-----Footer -----*/
@@ -1196,6 +1235,16 @@ label{
   font-size: 1.0625rem;
   border: 2px solid var(--grey);
   border-radius: 40px;
+}
+.cta-redeem{
+  padding: 6px 45px;
+  border-radius: 15px;
+  border-style: none;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+  top: 72%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: var(--grey);
 }
 .cta-sign-up{
   display: none;

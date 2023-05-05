@@ -46,6 +46,7 @@
 
   <main>
     <section class="bag-main-flex">
+      <section class="bag-promo-flex">
       <section class="bag">
         <h1 class="h1-grey">My Bag (1)</h1>
         <div class="line"></div>
@@ -53,10 +54,10 @@
         <div class="bag__frame"></div>
           <div class="bag__content">
               <div class="stars">
-                <p class="jackets-title">Scott</p>
+                <h2 class="bag__jackets-title">Scott</h2>
                 <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><span class="reviews">(129)</span></p>
               </div>
-            <p class="jackets-text">Black biker edition 2021 & Sea life Marine</p>
+            <p class="bag__jackets-text">Black biker edition 2021 & Sea life Marine</p>
             <form action="#" method="post">
               <div>
                 <input type="radio" id="size-small" name="sizes"/>
@@ -70,7 +71,7 @@
                 <input type="radio" id="size-xxl" name="sizes"/>
                 <label for="size-xxl" class="btn-size">XXL</label>
               </div>
-              <div class="amount">
+              <div class="order-amount">
                 <label for="amount">Quantity</label>
                 <select name="amount" id="amount" class="cta_quantity">
                   <option value="1">1</option>
@@ -79,9 +80,20 @@
                 </select>
               </div>
             </form>
+            <p class="bag__jackets-price"><span class="sale-price">899kr</span> 799,00 kr</p>
+            <p class="bag__shipping-time"> <i class="fa-solid fa-plus"></i>Free shipping 6-day delivery</p>
           </div>
         </div>
       </section>
+
+      <section class="promo-code">
+        <h3 class="h3-bag">Enter code here</h3>
+        <form action="#" method="post" class="promo-code__form">
+          <input type="code" id="code" name="promo-code" placeholder="Enter gift card or promo" required>
+          <input class="cta-redeem" type="submit" value="Redeem">
+        </form>
+      </section>
+    </section>
 
       <section class="order-summary">
         <div class="order-summary__content">
