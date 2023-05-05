@@ -24,8 +24,11 @@ main{
   background-color: #FFF;
 }
 :root{
-  --grey: rgba(112, 124, 140, 0.7);
+  --black-text: #222222;
+  --grey: rgb(112, 124, 140);
+  --grey-header-footer: rgba(112, 124, 140, 0.7);
   --white-text-page: #F9FAF5;
+  --white-text-stronger: #f5f6ff;
   --margin-page: 0 35px;
   --price-size: 1rem bold;
   --jacket-title-size: 1.3rem;
@@ -62,7 +65,7 @@ header{
 .lower-header{
   height: 80px;
   position: relative;
-  background-color: var(--grey);
+  background-color: var(--grey-header-footer);
   box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
   width: 100%;
   }
@@ -109,7 +112,7 @@ header label{
   z-index: 0;
 }
 .main-img__content{
-  color: var(--white-text-page);
+  color: var(--white-text-stronger);
   position: absolute;
   width: 20px;
   line-height: 38px;
@@ -254,6 +257,8 @@ header label{
   position: relative;
 }
 .sign-up__content{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   line-height: 45px;
   position: absolute;
@@ -264,7 +269,7 @@ header label{
   transform: translate(-50%, -50%);
 }
 #email, #code{
-  padding: 4px 200px 4px 9px;
+  padding: 4px 100px 4px 9px;
   border-radius: 15px;
   border-style: none;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
@@ -272,7 +277,7 @@ header label{
 
 /*----- Footer All Pages----- */
 footer{
-  background: var(--grey);
+  background: var(--grey-header-footer);
   box-shadow: 0px -8px 9px -8px rgba(112, 124, 140, 0.7);
   width: 100%;
   height: 80px;
@@ -1187,7 +1192,7 @@ label{
 
 /* -----Buttons&Lines----- */
 .cta-discover{
-  color: var(--white-text-page);
+  color: var(--white-text-stronger);
   text-align: center;
   padding: 2px 15px;
   font-size: var(--size-text-header-footer);
@@ -1247,15 +1252,13 @@ label{
   color: var(--grey);
 }
 .cta-sign-up{
-  display: none;
+  display: block;
+  margin: 0 auto;
   padding: 6px 45px;
   border-radius: 15px;
   border-style: none;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
-  top: 72%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  color: var(--grey);
+  color: var(--black-text);
 }
 .cta-send{
   color: var(--grey);
