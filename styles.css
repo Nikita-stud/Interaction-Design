@@ -227,12 +227,14 @@ header label{
 }
 .man{
   background-image: url(/pictures/Man.jpg);
+  filter: contrast(90%);
   background-position-y: top;
   margin-right: 15px;
   background-position: 50% 50%;
 }
 .women{
   background-image: url(/pictures/Women.jpg);
+  filter: contrast(90%);
   margin-top: 15px;
 }
 .man__content, .women__content{
