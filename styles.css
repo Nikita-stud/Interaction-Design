@@ -365,6 +365,7 @@ footer nav a {
 /*----- List of Jackets Page -----*/
 .main-list__img{
   background-image: url(/pictures/small_special-page.jpg);
+  filter: contrast(90%);
   background-size: cover;
   background-position: center center;
   min-height: 356px;
