@@ -273,8 +273,8 @@ header label{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#email, #code{
-  padding: 4px 100px 4px 9px;
+#email{
+  padding: 6px 50px;
   border-radius: 15px;
   border-style: none;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
@@ -1035,7 +1035,7 @@ label{
 }
 .popup__img{
   width: 50%;
-  min-height: 420px;
+  min-height: 440px;
   height: 100%;
   float: left;
 }
@@ -1047,7 +1047,6 @@ label{
   font-size: 1.6rem;
 }
 .popup__cta{
-  position: bottom;
   display: flex;
   justify-content: space-around;
 }
