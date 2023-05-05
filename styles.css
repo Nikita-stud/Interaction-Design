@@ -28,7 +28,7 @@ main{
   --grey: rgb(112, 124, 140);
   --grey-header-footer: rgba(112, 124, 140, 0.7);
   --white-text-page: #F9FAF5;
-  --white-text-stronger: #f9ffee;
+  --white-text-stronger: #ffffff;
   --margin-page: 0 35px;
   --price-size: 1rem bold;
   --jacket-title-size: 1.3rem;
@@ -1196,6 +1196,7 @@ label{
 /* -----Buttons&Lines----- */
 .cta-discover{
   color: var(--white-text-stronger);
+  background: #1818173d;
   text-align: center;
   padding: 2px 15px;
   font-size: var(--size-text-header-footer);
