@@ -28,7 +28,7 @@ main{
   --grey: rgb(89, 97, 107);
   --grey-header-footer: rgba(112, 124, 140, 0.7);
   --white-text-page: #F9FAF5;
-  --white-text-stronger: #f2f2ff;
+  --white-text-stronger: #e3e7de;
   --margin-page: 0 35px;
   --price-size: 1rem bold;
   --jacket-title-size: 1.3rem;
@@ -236,7 +236,7 @@ header label{
   margin-top: 15px;
 }
 .man__content, .women__content{
-  color: var(--white-text-page);
+  color: var(--white-text-stronger);
   position: absolute;
   display: flex;
   align-items: center;
