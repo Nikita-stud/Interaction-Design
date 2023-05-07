@@ -90,6 +90,7 @@ header label{
   position: absolute;
 }
 #hamburger-menu:checked ~ nav{
+  background-color: var(--grey-header-footer);
   margin-top: 80px;
   margin-right: -90px;
   padding: 40px 60px;
@@ -1202,10 +1203,16 @@ label{
   display: block;
   margin: 0 auto;
   padding: 6px 45px;
+  border: 1px solid var(--grey);
   border-radius: 15px;
-  border-style: none;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
   color: var(--black-text);
+}
+.cta-sign-up:hover{
+  cursor: pointer;
+  color: var(--white-text-stronger);
+  border: 1px solid var(--white-text-stronger);
+  background-color: var(--grey);
 }
 .cta-send{
   color: var(--grey);
