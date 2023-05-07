@@ -102,6 +102,7 @@ header label{
 /* -----Body Main Page----- */
 .main-img{
   background-image: url(/pictures/Main-home1.jpg);
+  filter: contrast(90%);
   background-size: cover;
   background-position-x: center;
   background-position-y: top;
