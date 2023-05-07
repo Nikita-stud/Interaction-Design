@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Inria_Serif;
+  font-family: "Inria_Serif";
   src: url(/fonts/Inria_Serif/InriaSerif-LightItalic.ttf);
 }
 
@@ -208,7 +208,6 @@ header label{
   font-size: var(--size-text-header-footer);
 }
 
-
 /* -----Body Gender Main Page----- */
 .gender{
   display: flex;
@@ -248,7 +247,6 @@ header label{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 /* -----Sign Up Main Page----- */
 .sign-up{
@@ -309,7 +307,6 @@ footer nav a {
   padding: 25px 0  0 35px;
 }
 
-
 /* -----About Page Small Version----- */
 .about__content{
   display: none;
@@ -361,7 +358,6 @@ footer nav a {
   margin-bottom: 30px;
 }
 
-
 /*----- List of Jackets Page -----*/
 .main-list__img{
   background-image: url(/pictures/small_special-page.jpg);
@@ -391,6 +387,7 @@ footer nav a {
   margin-top: 20px;
   padding: 0 35px;
 }
+
 /* -----Contact Page----- */
 .h1-grey, .h2-grey, .p-grey{
   text-align: center;
@@ -431,6 +428,7 @@ footer nav a {
 .input-section > *{
   flex: 1;
 }
+
 /* -----Contact Page and Checkout Page----- */
 input, textarea{
   border: 1px solid black;
@@ -444,6 +442,7 @@ label{
   font-size: 1.1rem;
   font-weight: bold;
 }
+
 /* -----Checkout Page----- */
 .checkout-flex{
   display: grid;
@@ -479,7 +478,6 @@ label{
   padding: 15px;
   box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
 }
-
 .checkout-img{
   padding: 10px;
   margin-top: 10px;
@@ -487,17 +485,6 @@ label{
   height: 200px;
   border: 1px rgba(128, 128, 128, 0.23) solid;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /*----- Checkout Success Page -----*/
 .success{
@@ -603,97 +590,72 @@ label{
 
 /* ----- My Bag Page----- */
 .bag-main-flex{
-  margin: 0 35px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  place-items: center;
   align-items: center;
-}
-.bag-main-flex > *{
-  flex: 1;
 }
 .bag{
   position: relative;
   text-align: center;
-  margin-right: 35px;
   max-width: 778px;
-  max-height: 521px;
+  max-height: 921px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
-.bag i{
-  font-size: large;
-}
-.bag__jackets-title{
-  text-decoration: underline;
-}
-.bag__jackets-price, .bag__shipping-time, .bag__jackets-text{
-  font-size: 1.2rem;
-  display: inline-block;
-  text-align: center;
-}
-.bag__shipping-time{
-  position: absolute;
-  color: var(--grey);
-  left: 40%;
-  top: 79%;
-  width: 150px;
-  line-height: 25px;
+.bag img{
+  max-height: 274px;
+  max-width: 312px;
+  border: 1px solid rgba(128, 128, 128, 0.444);
+  margin: 15px 35px 0 35px;
 }
 .bag__content{
-  margin-top: 30px;
-  line-height: 40px;
+  padding: 0 15px;
+  line-height: 48px;
 }
 .bag__content::after{
   clear: both;
   content: "";
   display: table;
 }
-.bag img{
-  float: left;
-  max-height: 274px;
-  max-width: 312px;
-  border: 1px solid rgba(128, 128, 128, 0.444);
-  margin: 35px 35px;
+.bag__jackets-title{
+  text-decoration: underline;
 }
-
-.promo-code{
-  display: flex;
-  justify-content: space-around;
-  padding: 20px 0;
-  max-width: 758px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+.bag i{
+  font-size: large;
 }
-.promo-code__form{
-  position: relative;
+.bag__jackets-price, .bag__shipping-time, .bag__jackets-text{
+  font-size: 1.2rem;
+  display: inline-block;
+  text-align: center;
 }
-.promo-code__form::after{
-  clear: both;
-  content: "";
-  display: table;
-}
-.h3-bag{
-  font-size: 1.8rem;
-}
-
-.order-summary{
-  display: flex;
-  flex-direction: column;
-  line-height: 65px;
-  font-size: 2rem;
-  max-width: 293px;
-  max-height: 618px;
-  padding: 15px;
-  margin: 60px 0px;
-  border-radius: 4px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
-}
-.order-amount{
+.bag__order-amount{
   border: #313131 2px solid;
   border-radius: 20px;
   display: inline;
   padding: 8px 1px 8px 8px;
 }
 
+.bag__jackets-price{
+  font-size: 1.8rem;
+}
+.bag__shipping-time{
+  color: var(--grey);
+}
+
+.order-summary{
+  max-width: 455px;
+  max-height: 660px;
+  margin: 50px 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+}
+.order-summary__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 65px;
+  font-size: 2rem;
+  padding: 20px;
+}
 
 
 
@@ -705,20 +667,10 @@ label{
 
 
 
+/* ----------------------------Media-Queries---------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-/* -----Media-Queries----- */
 @media (max-width:839px){
+ /* -----Home Page----- */
   .dark-header{
     display: none;
   }
@@ -732,7 +684,7 @@ label{
   .main-img__content .cta-discover{
     display: none;
   }
- /* -----Footer----- */
+  /* -----Footer----- */
   .line{
     display: none;
   }
@@ -746,13 +698,16 @@ label{
     display: flex;
     flex-direction: column;
   }
-  
   /* -----Contact Page----- */
   .contact-flex{
     margin: 50px 0 30px 0;
   }
   .cta-send{
     width: 100%;
+  }
+  /* -----Bag Page----- */
+  .bag-main-flex{
+    margin-top: 120px;
   }
 }
 
@@ -767,7 +722,6 @@ label{
     left: 48%;
     transform: translate(-50%, -50%);
     }
-
   nav a{
     font-size: 2rem;
     }
@@ -798,7 +752,6 @@ label{
   .checkout-flex > *{
     flex: 0;
   }
-  
   .shipping-field, .payment-field{
     margin: 0;
     min-width: 345px;
@@ -821,11 +774,8 @@ label{
   .popup p{
     font-size: 1.2rem;
   }
-
     }
   
-
-
 
 @media (min-width:840px){
 
@@ -852,7 +802,6 @@ label{
   }
   .main-header{
   }
-  
   .icons a img{
     padding-right: 0px;
     margin-right: 32px;
@@ -868,7 +817,6 @@ label{
   nav li{
     padding: 0 10px 0 0;
   }
-
   .main-img{
     filter: contrast(90%);
     min-height: 536px;
@@ -933,6 +881,7 @@ label{
     padding: 50px 0px;
     line-height: 38px;
   }
+
   /* ----Footer---- */
   footer{
     display: flex;
@@ -949,8 +898,8 @@ label{
   .footer-icons{
     gap: 10px;
   }
- 
-/* -----About Page----- */
+
+ /* -----About Page----- */
 .about-header{
   color: var(--white-text-page);
   width: 100%;
@@ -990,6 +939,7 @@ label{
   width: 100%;
   font-size: var(--size-text-header-footer);
 } 
+
 /* -----About Page Small Version----- */
 .about-sm-quote, .about-sm, .about-sm-header_content{
   display: none;
@@ -1047,6 +997,30 @@ label{
   left: 96%;
 }
 
+/* ----- My Bag Page----- */
+.bag-main-flex{
+  margin: 0 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.bag-main-flex > *{
+  flex: 1;
+}
+.bag{
+  margin-right: 35px;
+  min-width: 688px;
+  max-height: 521px;
+}
+.bag img{
+  float: left;
+  margin: 35px 35px;
+}
+.bag__content{
+  margin-top: 30px;
+  line-height: 40px;
+}
+
 /*----- Checkout Page -----*/
 .shipping-field{
   margin-top: 35px;
@@ -1071,18 +1045,7 @@ label{
 .order__content{
   grid-template-columns: repeat(3,200px);
 }
-
-}
-
-
-
-
-
-
-
-
-
-
+  }
 
 
 @media (min-width: 447px) and (max-width:714px){
@@ -1110,17 +1073,7 @@ label{
   .contact-field{
     max-width: 480px;
   }
-
 }
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width:446px){
@@ -1140,7 +1093,7 @@ label{
    #email, #code{
     padding: 4px 100px 4px 9px;
      }
-/*-----Footer -----*/
+  /*-----Footer -----*/
    .footer-icons{
     flex-direction: column;
     margin: 0px 35px;
@@ -1150,15 +1103,14 @@ label{
   .footer-logo img{
     display: none;
    }
- /*----- Checkout page -----*/
+  /*----- Checkout page -----*/
    .shipping-field, .payment-field{
     width: 300px;
   }
   .order-field{
     width: 300px;
   }
-
- /*----- List of jackets page -----*/
+  /*----- List of jackets page -----*/
    .list-jackets{
     justify-content: space-around;
   }
@@ -1183,15 +1135,8 @@ label{
 
 
 
+/* ----------------------------Buttons & Lines---------------------------- */
 
-
-
-
-
-
-
-
-/* -----Buttons&Lines----- */
 .cta-discover{
   color: var(--white-text-stronger);
   background: #1818173d;
