@@ -934,7 +934,7 @@ label{
   padding: 0 35px ;
 }
 .about-footer{
-  background: var(--grey);
+  background: var(--grey-header-footer);
   position: absolute;
   bottom: 0px;
   box-shadow: -10px -10px 13px -13px rgba(112, 124, 140, 0.7);
