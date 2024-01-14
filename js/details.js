@@ -1,13 +1,11 @@
 import {url} from "./constants.js";
-import {catchAndDisplay} from "./ui/catch.js";
-
-const queryString = document.location.search;
-const parameters = new URLSearchParams(queryString);
-const id = parameters.get("id");
-
-const jacketUrl = `${url}/${id}`;
+import {catchAndDisplay} from "./ui/catchAndDisplay.js";
+import {getQueryParam} from "./helper/getQueryParam.js";
 
 const detailsContainer = document.querySelector(".details__container");
+
+const id = getQueryParam("id");
+const jacketUrl = `${url}/${id}`;
 
 if(!id){
   window.location.href="/";
@@ -23,12 +21,11 @@ async function fetchJacket(){
 
     detailsContainer.innerHTML ="";
 
-    filterAPI(jackets)
+    // filterAPI(jackets)
     createDetailsHTML(jackets)
 
   }catch(error){
-    console.log(error);
-    catchAndDisplay("","There has been an error in loading the page","error")
+    catchAndDisplay(".details__container","There has been an error in loading the page","error")
   }
 
 }
@@ -36,20 +33,18 @@ fetchJacket()
 
 
 
-function filterAPI(jacket){
+// function filterAPI(jacket){
 
-  
+//   let discountedPriceString = "No discount";
+
+//   if(jacket.discountedPrice >= jacket.price  && jacket.discountedPrice){
+//     discountedPriceString = jacket.discountedPrice;
+//   }
                   
-}
+// }
 
 
 function createDetailsHTML(jacket){
-
-  let discountedPriceString = "No discount";
-
-  if(jacket.discountedPrice >= jacket.price  && jacket.discountedPrice){
-    discountedPriceString = jacket.discountedPrice;
-  }
 
   const container = document.querySelector(".details__container");
 
@@ -72,7 +67,7 @@ function createDetailsHTML(jacket){
 
   const discount = document.createElement("p");
   discount.classList.add("details-discount");
-  discount.textContent =`${discountedPriceString}`;
+  discount.textContent =`${jacket.discountedPrice}`;
   
   container.append(h1);
   container.append(img)

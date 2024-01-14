@@ -1,5 +1,5 @@
 import {url} from "./constants.js";
-import {catchAndDisplay} from "./ui/catch.js";
+import {catchAndDisplay} from "./ui/catchAndDisplay.js";
 
 const container = document.querySelector("#jackets__container");
 
@@ -25,7 +25,7 @@ async function getJackets(){
                                   <button href="bag.html" id="add" class="cta-add" data-id=${jacket.id}>Add to bag</button>
                               </div>`;
 
-      const jacketTitle = document.querySelector("#jackets-title");
+      // const jacketTitle = document.querySelector("#jackets-title");
       
       // if(jacket.title.length <= 24){
       //   jacketTitle.style.paddingBottom = "10px";
@@ -40,8 +40,8 @@ async function getJackets(){
     });
 
   }catch(error){
-    console.log(error);
-    catchAndDisplay("","There has been an error in loading the page","error")
+    consol.error(error)
+    catchAndDisplay(".container","There has been an error in loading the page","error")
   }
 
   return;
