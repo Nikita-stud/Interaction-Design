@@ -7,6 +7,8 @@ const id = parameters.get("id");
 
 const jacketUrl = `${url}/${id}`;
 
+const detailsContainer = document.querySelector(".details__container");
+
 if(!id){
   window.location.href="/";
 }
@@ -18,6 +20,8 @@ async function fetchJacket(){
     const fetched = await fetch(jacketUrl);
     const results = await fetched.json();
     const jackets = results;
+
+    detailsContainer.innerHTML ="";
 
     filterAPI(jackets)
     createDetailsHTML(jackets)
@@ -34,19 +38,18 @@ fetchJacket()
 
 function filterAPI(jacket){
 
-  let discount = "";
   
-  const parsedDiscount = parseFloat(jacket.discountedPrice);
-  const parsedPrice = parseFloat(jacket.price);
-
-  if(parsedPrice <= parsedDiscount  && !parsedDiscount){
-    discount = jacket.discountedPrice;
-  }
                   
 }
 
 
 function createDetailsHTML(jacket){
+
+  let discountedPriceString = "No discount";
+
+  if(jacket.discountedPrice >= jacket.price  && jacket.discountedPrice){
+    discountedPriceString = jacket.discountedPrice;
+  }
 
   const container = document.querySelector(".details__container");
 
@@ -54,9 +57,10 @@ function createDetailsHTML(jacket){
   h1.classList.add("details-header");
   h1.textContent =`${jacket.title} - ${jacket.baseColor}`;
 
-  const div = document.createElement("div");
-  div.classList.add("details-img");
-  div.style.backgroundImage =`${jacket.image}`;
+  const img = document.createElement("img");
+  img.classList.add("details-img");
+  img.src =`${jacket.image}`;
+  img.alt = `${jacket.title}`;
 
   const detailsPrg = document.createElement("p");
   detailsPrg.classList.add("details-description");
@@ -68,11 +72,10 @@ function createDetailsHTML(jacket){
 
   const discount = document.createElement("p");
   discount.classList.add("details-discount");
-  discount.textContent =`${jacket.discountedPrice}`;
+  discount.textContent =`${discountedPriceString}`;
   
-
   container.append(h1);
-  container.append(div)
+  container.append(img)
   container.append(detailsPrg);
   container.append(price);
   container.append(discount);

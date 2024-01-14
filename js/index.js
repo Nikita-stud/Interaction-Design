@@ -1,8 +1,7 @@
 import {url} from "./constants.js";
 import {catchAndDisplay} from "./ui/catch.js";
 
-const container = document.querySelector(".horizontal-jackets__container");
-// const addButton = document.querySelector(".cta-add");
+const container = document.querySelector("#jackets__container");
 
 async function getJackets(){
   try{
@@ -10,18 +9,27 @@ async function getJackets(){
     const results = await fetched.json()
     const jackets = results;
 
+
+    container.innerHTML = "";
+
     jackets.forEach(function(jacket){
-      container.innerHTML += `<div class="horizontal-jackets__container">
-                                <div class="jackets-text__container">
+      container.innerHTML += `<div id="horizontal-jackets__container" class="horizontal-jackets__container">
+                                <div id="jackets-text__container" class="jackets-text__container">
                                   <a href="details.html?id=${jacket.id}">
-                                    <img src="${jacket.image}" class="jacket-img" alt="${jacket.description}">
-                                    <h3 class="jackets-title">${jacket.title}</h3>
-                                    <p class="jackets-text">${jacket.description}</p>
-                                    <p class="jackets-price">${jacket.price}, kr</p>
+                                    <img src="${jacket.image}" id="jacket-img" alt="${jacket.title}">
+                                    <h3 id="jackets-title" class="jackets-title">${jacket.title}</h3>
+                                    <p id="jackets-text" class="jackets-text">${jacket.description}</p>
+                                    <p id="jackets-price">${jacket.price}, kr</p>
                                   </a>
+                                  </div>
                                   <button href="bag.html" id="add" class="cta-add" data-id=${jacket.id}>Add to bag</button>
-                                </div>
                               </div>`;
+
+      const jacketTitle = document.querySelector("#jackets-title");
+      
+      // if(jacket.title.length <= 24){
+      //   jacketTitle.style.paddingBottom = "10px";
+      // }
                               
     });
 
