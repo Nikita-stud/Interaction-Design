@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Montserrat:wght@100&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css">
+  <script src="js/list-of-jackets.js" type="module"></script>
 </head>
 
 
@@ -28,11 +29,11 @@
       <img onclick="location.href='index.html';" src="pictures/Logo-white.png" href="index.html" class="logo" alt="Logo of the page">
         <nav class="main-header">
           <ul>
-            <li class="header-text"><a href="index.html">Home</a></li>
-            <li class="header-text"><a href="#">Deals</a></li>
+            <li class="header-text"><a href="/">Home</a></li>
+            <li class="header-text"><a href="deals.html">Deals</a></li>
             <li class="header-text"><a href="#">Women</a></li>
             <li class="header-text"><a href="#">Man</a></li>
-            <li class="header-text"><a href="#">Kids</a></li>
+            <li class="header-text"><a href="list-of-jackets.html" class="active">All</a></li>
           </ul>
         </nav>
        <!-- Some Icons from Font Awesome and other websites did not work for some reason, had to use img from Figma, wrote description for blind people to understand the images -->
@@ -53,7 +54,7 @@
     <div class="line"></div>
 
     <!-- Invisible popup - only visible when pressing on the jackets (no Javascript)-->
-    <section>
+    <!-- <section>
       <div class="popup" id="popup">
         <img src="/pictures/RainyDays_Jacket4.png" class="popup__img" alt="Black biker jacket">
           <div class="popup__content">
@@ -72,294 +73,14 @@
               </div>
           </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- List of Jackets starts here-->
-    <section class="list-jackets">
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket5.png" class="jacket-img" alt="Grey jacket">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Rain jacket grey edition 2021 & Greyon</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div> 
-          <p class="jackets-price"><span class="sale-price">1200kr</span> 899,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
 
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">1499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
+    <section class="spes-jacket__rows">
+      <div class="jackets__container" id="jackets__container"><div class="loading__container"><span class="loading-indicator">Loading...</span></div>
       </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket3.png" class="jacket-img" alt="Red jacket">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Explicit red silicon neon edition 2022 & Figi</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>       
-          <p class="jackets-price">699,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket2.png" class="jacket-img" alt="Black cobra jacket">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Black cobra mountain edition 2022 & NAVY</p>
-            <div class="circles">
-             <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">999,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket4.png" class="jacket-img" alt="Black biker jacket">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Black biker edition 2021 & Sea life Marine</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price"><span class="sale-price">899kr</span> 799,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket7.png" class="jacket-img" alt="Bruel cobra sweater">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">High density cobra sweater edition 2022 & Bruel</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">1499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket5.png" class="jacket-img" alt="Grey jacket">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Rain jacket grey edition 2021 & Greyon</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div> 
-          <p class="jackets-price"><span class="sale-price">1200kr</span> 899,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">1499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-     
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket7.png" class="jacket-img" alt="Bruel cobra sweater">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">High density cobra sweater edition 2022 & Bruel</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">1499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket5.png" class="jacket-img" alt="Grey jacket">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Rain jacket grey edition 2021 & Greyon</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div> 
-          <p class="jackets-price"><span class="sale-price">1200kr</span> 899,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket7.png" class="jacket-img" alt="Bruel cobra sweater">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">High density cobra sweater edition 2022 & Bruel</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">1499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket5.png" class="jacket-img" alt="Grey jacket">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Rain jacket grey edition 2021 & Greyon</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div> 
-          <p class="jackets-price"><span class="sale-price">1200kr</span> 899,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">1499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-     
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket7.png" class="jacket-img" alt="Bruel cobra sweater">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">High density cobra sweater edition 2022 & Bruel</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">1499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-     
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket7.png" class="jacket-img" alt="Bruel cobra sweater">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">High density cobra sweater edition 2022 & Bruel</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="horizontal-jackets__container">
-        <a href="#popup">
-          <img src="/pictures/RainyDays_Jacket1.png" class="jacket-img" alt="Raincoat one-piece reflection edition">
-          <h3 class="jackets-title">Scott</h3>
-          <p class="jackets-text">Raincoat one-piece reflection edition 2022 & NS</p>
-            <div class="circles">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          <p class="jackets-price">1499,00 kr</p>
-        </a>
-        <a href="#" class="cta-add">Add to bag</a>
-      </div>
-
-      <div class="line"></div>
     </section>
-
-
   </main>
 
   <footer> 

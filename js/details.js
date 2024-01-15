@@ -21,7 +21,6 @@ async function fetchJacket(){
 
     detailsContainer.innerHTML ="";
 
-    // filterAPI(jackets)
     createDetailsHTML(jackets)
 
   }catch(error){
@@ -33,20 +32,22 @@ fetchJacket()
 
 
 
-// function filterAPI(jacket){
+function filterDiscount(jacket){
 
-//   let discountedPriceString = "No discount";
-
-//   if(jacket.discountedPrice >= jacket.price  && jacket.discountedPrice){
-//     discountedPriceString = jacket.discountedPrice;
-//   }
-                  
-// }
+  let discountedPriceString = "";
+  if(jacket.discountedPrice >= jacket.price  && jacket.discountedPrice){
+    discountedPriceString = jacket.discountedPrice;
+    /* Price from createDetailsHTML */
+    price.style.textDecoration = "line-through";
+  }         
+}
 
 
 function createDetailsHTML(jacket){
-
   const container = document.querySelector(".details__container");
+
+  // const div = document.createElement("div");
+  // div.classList.add("details__")
 
   const h1 = document.createElement("h1");
   h1.classList.add("details-header");
@@ -67,12 +68,11 @@ function createDetailsHTML(jacket){
 
   const discount = document.createElement("p");
   discount.classList.add("details-discount");
-  discount.textContent =`${jacket.discountedPrice}`;
+  discount.textContent =`kr ${jacket.discountedPrice},-`;
   
   container.append(h1);
   container.append(img)
   container.append(detailsPrg);
   container.append(price);
   container.append(discount);
-
 }

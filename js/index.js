@@ -1,5 +1,6 @@
 import {url} from "./constants.js";
 import {catchAndDisplay} from "./ui/catchAndDisplay.js";
+import { handleClick } from "./helper/handleClick.js";
 
 const container = document.querySelector("#jackets__container");
 
@@ -48,14 +49,6 @@ async function getJackets(){
 }
 
 getJackets()
-
-
-function handleClick(event){
-  const product = {id: event.target.dataset.id}
-  const favoriteList = JSON.parse(localStorage.getItem("favorites")) || [];
-  favoriteList.push(product);
-  localStorage.setItem("favorites", JSON.stringify(favoriteList));
-}
 
 
 
