@@ -1,6 +1,7 @@
 import {url} from "./constants.js";
 import {catchAndDisplay} from "./ui/catchAndDisplay.js";
 import { handleClick } from "./helper/handleClick.js";
+import { fetchJackets } from "./api/fetchJackets.js";
 
 const container = document.querySelector("#jackets__container");
 
@@ -10,21 +11,9 @@ async function getJackets(){
     const results = await fetched.json()
     const jackets = results;
 
-
     container.innerHTML = "";
-
-    jackets.forEach(function(jacket){
-      container.innerHTML += `<div id="horizontal-jackets__container" class="horizontal-jackets__container">
-                                <div id="jackets-text__container" class="jackets-text__container">
-                                  <a href="details.html?id=${jacket.id}">
-                                    <img src="${jacket.image}" id="jacket-img" alt="${jacket.title}">
-                                    <h3 id="jackets-title" class="jackets-title">${jacket.title}</h3>
-                                    <p id="jackets-text" class="jackets-text">${jacket.description}</p>
-                                    <p id="jackets-price">${jacket.price}, kr</p>
-                                  </a>
-                                  </div>
-                                  <button href="bag.html" id="add" class="cta-add" data-id=${jacket.id}>Add to bag</button>
-                              </div>`;
+    
+    fetchJackets(jackets);
 
       // const jacketTitle = document.querySelector("#jackets-title");
       
@@ -32,7 +21,7 @@ async function getJackets(){
       //   jacketTitle.style.paddingBottom = "10px";
       // }
                               
-    });
+    // });
 
     const ctaAdd = document.querySelectorAll("#add");
 
