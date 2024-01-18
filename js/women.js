@@ -1,14 +1,24 @@
-export function fetchJackets(jackets){
-  const container = document.querySelector("#jackets__container");
+import { url } from "./constants.js";
+import { handleClick } from "./helper/handleClick.js";
 
-  jackets.forEach(function(jacket){
+const container = document.querySelector(".spes-jacket__rows");
+
+
+async function fetchDeals(){
+  const fetched = await fetch(url);
+  const results = await fetched.json();
+
+  container.innerHTML= "";
+
+  results.forEach(function(jacket){
 
     let discount = "";
     if(jacket.price > jacket.discountedPrice){
       discount = jacket.discountedPrice;
     }
 
-    container.innerHTML += `<div id="horizontal-jackets__container" class="horizontal-jackets__container">
+    if(jacket.gender === "Female"){
+       container.innerHTML += `<div id="horizontal-jackets__container" class="horizontal-jackets__container">
                               <div id="jackets-text__container" class="jackets-text__container">
                                 <a href="details.html?id=${jacket.id}">
                                   <img src="${jacket.image}" id="jacket-img" alt="${jacket.title}">
@@ -19,5 +29,13 @@ export function fetchJackets(jackets){
                                 </div>
                                 <button href="bag.html" id="add" class="cta-add" data-id=${jacket.id}>Add to bag</button>
                             </div>`;
+    }
+  });
+
+  const ctaAdd = document.querySelectorAll("#add");
+
+  ctaAdd.forEach(function(button){
+    button.addEventListener("click", handleClick);
   });
 }
+fetchDeals()

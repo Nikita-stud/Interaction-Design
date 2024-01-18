@@ -14,17 +14,8 @@ async function getJackets(){
     container.innerHTML = "";
     
     fetchJackets(jackets);
-
-      // const jacketTitle = document.querySelector("#jackets-title");
-      
-      // if(jacket.title.length <= 24){
-      //   jacketTitle.style.paddingBottom = "10px";
-      // }
                               
-    // });
-
     const ctaAdd = document.querySelectorAll("#add");
-
     ctaAdd.forEach(function(button){
       button.addEventListener("click", handleClick);
     });
@@ -33,17 +24,5 @@ async function getJackets(){
     consol.error(error)
     catchAndDisplay(".container","There has been an error in loading the page","error")
   }
-
-  return;
 }
-
 getJackets()
-
-
-
-
-// addButton.addEventListener("click", popup);
-
-// function popup(){
-
-// }

@@ -1,3 +1,5 @@
+import { fetchJacketFilter } from "./fetchJacketFilter";
+
 export function fetchJacket(jacket){
   const container = document.querySelector(".details__container");
 
@@ -30,4 +32,6 @@ export function fetchJacket(jacket){
   container.append(detailsPrg);
   container.append(price);
   container.append(discount);
+
+  fetchJacketFilter(jacket)
 }

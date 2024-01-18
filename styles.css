@@ -195,11 +195,14 @@ header label{
   border-radius: 50%;
   background-color: rgb(56, 92, 92);
 }
-#jackets-price{
+.jackets-price{
   text-align: center;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
+}
+.jackets-discount-price{
+  color: rgb(212, 22, 22);
 }
 .sale-price{
   text-decoration: line-through;

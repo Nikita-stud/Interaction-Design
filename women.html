@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Details of Jackets</title>
-    <meta charset="en-US">
-    <link href="styles.css" rel="stylesheet">
-    <meta description="this is a cool website that has many benefits for cool people">
+    <title>Deals of Jackets</title>
+    <meta name="description" content="Best deals available from the Rainy Days collection">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="js/details.js" type="module"></script>
+  
+    <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Montserrat:wght@100&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css">
+    <script src="js/women.js" type="module"></script>
   </head>
+
 
   <body class="body-small">
     <header>
@@ -21,9 +29,9 @@
         <img onclick="location.href='index.html';" src="pictures/Logo-white.png" href="index.html" class="logo" alt="Logo of the page">
           <nav class="main-header">
             <ul>
-              <li class="header-text"><a href="index.html">Home</a></li>
+              <li class="header-text"><a href="/">Home</a></li>
               <li class="header-text"><a href="deals.html">Deals</a></li>
-              <li class="header-text"><a href="women.html">Women</a></li>
+              <li class="header-text"><a class="active">Women</a></li>
               <li class="header-text"><a href="man.html">Man</a></li>
               <li class="header-text"><a href="list-of-jackets.html">All</a></li>
             </ul>
@@ -38,9 +46,12 @@
       </header>
 
       <main>
-        <section class ="details__section">
-          <div class="details__container">
-            <div class="loading__container"><span class="loading-indicator">Loading...</span></div>
+        <section class="header-top">
+          <h1 class="h1-grey">New collection for all the females</h1>
+          <div class="line"></div>
+        </section>
+        <section class="spes-jacket__rows">
+          <div class="jackets__container" id="jackets__container"><div class="loading__container"><span class="loading-indicator">Loading...</span></div>
           </div>
         </section>
       </main>

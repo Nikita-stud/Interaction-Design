@@ -7,12 +7,9 @@ const detailsContainer = document.querySelector(".details__container");
 
 const id = getQueryParam("id");
 const jacketUrl = `${url}/${id}`;
-
 if(!id){
   window.location.href="/";
 }
-
-
 
 async function getJacket(){
   try{
@@ -29,15 +26,3 @@ async function getJacket(){
 
 }
 getJacket()
-
-
-
-function filterDiscount(jacket){
-
-  let discountedPriceString = "";
-  if(jacket.discountedPrice >= jacket.price  && jacket.discountedPrice){
-    discountedPriceString = jacket.discountedPrice;
-    /* Price from createDetailsHTML */
-    price.style.textDecoration = "line-through";
-  }         
-}
