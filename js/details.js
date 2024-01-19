@@ -2,6 +2,7 @@ import {url} from "./constants.js";
 import {catchAndDisplay} from "./ui/catchAndDisplay.js";
 import {getQueryParam} from "./helper/getQueryParam.js";
 import { fetchJacket } from "./api/fetchJacket.js";
+import { handleClick } from "./helper/handleClick.js";
 
 const detailsContainer = document.querySelector(".details__container");
 
@@ -20,6 +21,9 @@ async function getJacket(){
 
     fetchJacket(results);
 
+    const ctaAdd = document.querySelector("#add");
+    ctaAdd.addEventListener("click", handleClick);
+    
   }catch(error){
     catchAndDisplay(".details__container","There has been an error in loading the page","error")
   }

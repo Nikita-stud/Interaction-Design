@@ -39,6 +39,7 @@ export function fetchJacket(jacket){
   button.classList.add("cta-add-details");
   button.id = "add";
   button.textContent ="Add to bag";
+  //Here the setAttribute does not work 
   button.setAttribute("add-id", jacket.id);
   
   container.append(div);
