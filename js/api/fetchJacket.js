@@ -1,4 +1,3 @@
-
 export function fetchJacket(jacket){
   const container = document.querySelector(".details__container");
 
@@ -18,6 +17,8 @@ export function fetchJacket(jacket){
   detailsPrg.classList.add("details-description");
   detailsPrg.textContent =`${jacket.description}`;
 
+  const line = document.createElement("hr")
+
   const price = document.createElement("p");
   price.classList.add("details-price");
   price.textContent = ``;
@@ -35,19 +36,17 @@ export function fetchJacket(jacket){
 
   const button = document.createElement("button");
   button.location = "bag.html";
-  button.classList.add("cta-add");
+  button.classList.add("cta-add-details");
   button.id = "add";
   button.textContent ="Add to bag";
   button.setAttribute("add-id", jacket.id);
-
-
   
   container.append(div);
   container.append(img)
   div.append(h2);
   div.append(detailsPrg);
+  div.append(line)
   div.append(price);
   div.append(discount);
   div.append(button);
-
 }

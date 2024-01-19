@@ -14,12 +14,11 @@ async function getJackets(){
     container.innerHTML = "";
     
     fetchJackets(jackets);
-                              
+                            
     const ctaAdd = document.querySelectorAll("#add");
     ctaAdd.forEach(function(button){
       button.addEventListener("click", handleClick);
     });
-
   }catch(error){
     consol.error(error)
     catchAndDisplay(".container","There has been an error in loading the page","error")

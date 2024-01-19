@@ -11,7 +11,6 @@ async function fetchDeals(){
   container.innerHTML= "";
 
   results.forEach(function(jacket){
-
     let discount = "";
     if(jacket.price > jacket.discountedPrice){
       discount = jacket.discountedPrice;
