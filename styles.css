@@ -682,9 +682,9 @@ label{
   height: 100%;
 }
 .details__container{
+  display: flex;
   border: 1px solid black;
-  overflow: auto;
-  background-color: var(--white-text-page);
+  background-color: white;
   margin: 150px 0 50px 0;
   padding: 20px 0px 20px 0px;
 }
@@ -695,7 +695,6 @@ label{
 }
 .details-img{
   display: inline;
-  float: left;
   border: 1px black solid;
   position: left;
   border-radius: 3px;
@@ -714,7 +713,7 @@ label{
   font-size: 1.8rem;
 }
 .details-discount{
-  
+  color: rgb(216, 27, 27);
 }
 
 /*----- DEALS PAGE --------*/

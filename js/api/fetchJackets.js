@@ -20,4 +20,5 @@ export function fetchJackets(jackets){
                                 <button href="bag.html" id="add" class="cta-add" data-id=${jacket.id}>Add to bag</button>
                             </div>`;
   });
+  localStorage()
 }
