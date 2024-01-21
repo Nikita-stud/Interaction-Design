@@ -27,7 +27,7 @@ export function fetchJackets(jackets){
 }
 
 
-// Tried doing the code with createElement but that did not work!!! (This version has one less span in the paragraph, but it does not ruin the code)
+// -----Tried doing the code with createElement but that did not work!!! (This version has one less span in the paragraph, but it does not ruin the code)
 
 // export function fetchJackets(jackets){
 //   const container = document.querySelector("#jackets__container");

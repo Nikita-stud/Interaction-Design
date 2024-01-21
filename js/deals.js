@@ -1,6 +1,5 @@
 import { url } from "./constants.js";
 import { handleClick } from "./helper/handleClick.js";
-import { catchAndDisplay } from "./ui/catchAndDisplay.js";
 
 const container = document.querySelector(".spes-jacket__rows");
 
@@ -42,7 +41,7 @@ async function fetchDeals(){
       button.addEventListener("click", handleClick);
     });
   }catch(error){
-    catchAndDisplay("container","There has been an error in loading the page","error")
+    container.innerHTML = `<div class="error">There has been an error</div>`;
   }
 }
 fetchDeals()

@@ -37,6 +37,20 @@ async function fetchDeals(){
       }
     });
 
+
+    // -----Tried fetching the fetchJacketsList.js for less code
+
+    // for(let i = 0; i< jackets.length; i++){
+      
+    //   const genderTrimed = jackets[i].gender.toLowerCase().trim();
+
+    //   if(genderTrimed === "female"){
+    //     fetchJacketList(jackets)
+    //   }else{
+    //     continue
+    //   }
+    // }
+
     const ctaAdd = document.querySelectorAll("#add");
     ctaAdd.forEach(function(button){
       button.addEventListener("click", handleClick);
