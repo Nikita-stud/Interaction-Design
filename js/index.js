@@ -21,7 +21,7 @@ async function getJackets(){
     });
   }catch(error){
     consol.error(error)
-    catchAndDisplay(".container","There has been an error in loading the page","error")
+    catchAndDisplay(".container","There has been an error in loading the page","error");
   }
 }
 getJackets()

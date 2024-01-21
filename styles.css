@@ -157,18 +157,14 @@ header label{
   position: relative;
 }
 .jackets__container{
- min-width: 240px;
- height: 450px;
- display: flex;
- flex-direction: row;
- gap: 40px;
+  width: 100%;
+  min-width: 240px;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
 }
 
-
-/* .jackets__container::active{
-  width: 80vh;
-  height: 50vh;
-} */
 .jacket-img{
   width: 240px;
   height: 243px;
@@ -397,14 +393,6 @@ footer nav a {
   align-items: top;
   margin-top: 20px;
   padding: 0 35px;
-}
-.spes-jacket__rows{
-  padding: 30px 30px;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
 }
 
 /* -----Contact Page----- */
@@ -795,6 +783,15 @@ label{
   .bag-main-flex{
     margin-top: 120px;
   }
+/* ----------------------------List-of-jackets-page---------------------------- */
+  .spes-jacket__rows{
+    padding: 30px 30px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
   /* ----------------------------Details Page---------------------------- */
   .details__container{
     flex-direction: column-reverse;
@@ -1045,13 +1042,21 @@ label{
 }
 
 /* ----List of jackets page---- */
-  .main-list__img{
-    background-image: url(/pictures/special-page.jpg);
-    margin: 115px 35px 20px 35px;
-    width: calc(100% - 70px);
-    background-position-x: bottom;
-    background-position-y: center;
-  }
+.main-list__img{
+  background-image: url(/pictures/special-page.jpg);
+  margin: 115px 35px 20px 35px;
+  width: calc(100% - 70px);
+  background-position-x: bottom;
+  background-position-y: center;
+}
+.spes-jacket__rows{
+  padding: 30px 30px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
 
 /*----- Jackets Special Page -----*/
 .popup{
@@ -1188,13 +1193,6 @@ label{
       margin: 0 25px 0 0;
       padding: 0 25px 25px 25px;
   }
-  /* .jackets__container{
-    border-radius: 20px;
-    padding: 0;
-    margin: 0px -25px 0 0;
-    scroll-behavior: none;
-    overflow: hidden;
-  } */
   /*-----Footer -----*/
    .footer-icons{
     flex-direction: column;
@@ -1391,15 +1389,15 @@ input[type="radio"]:checked + label{
 }
 .error{
   padding: 20px;
-  border: red 2px solid;
+  border: rgb(215, 18, 18) 2px solid;
   font-size: 1.2rem;
-  color: red;
+  color: rgb(220, 18, 18);
 }
 
 
 .loading__container{
   margin: 5px auto;
-  width: 99%;
+  width: 99.5%;
   min-height: 300px;
   display: grid;
   place-items: center;
@@ -1435,7 +1433,7 @@ input[type="radio"]:checked + label{
 
 
 
-/------ Cool Page ---------/
+/*------ Cool Page ---------*/
 
 .pic{
   filter: contrast(90%);
