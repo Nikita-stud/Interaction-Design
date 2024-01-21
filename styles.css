@@ -1149,6 +1149,16 @@ label{
 .order__content{
   grid-template-columns: repeat(3,200px);
 }
+
+
+/*----- Error -----*/
+.error{
+  width: 100%;
+  min-height: 250px;
+}
+
+
+
   }
 
 
@@ -1388,6 +1398,9 @@ input[type="radio"]:checked + label{
   font-family: Arial, Helvetica, sans-serif;
 }
 .error{
+  width: 100%;
+  display: grid;
+  place-items: center;
   padding: 20px;
   border: rgb(215, 18, 18) 2px solid;
   font-size: 1.2rem;

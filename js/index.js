@@ -1,5 +1,5 @@
 import {url} from "./constants.js";
-import {catchAndDisplay} from "./ui/catchAndDisplay.js";
+// import {catchAndDisplay} from "./ui/catchAndDisplay.js";
 import { handleClick } from "./helper/handleClick.js";
 import { fetchJackets } from "./api/fetchJackets.js";
 
@@ -20,8 +20,7 @@ async function getJackets(){
       button.addEventListener("click", handleClick);
     });
   }catch(error){
-    consol.error(error)
-    catchAndDisplay(".container","There has been an error in loading the page","error");
+    container.innerHTML = `<div class="error">There has been an error</div>`;
   }
 }
 getJackets()
