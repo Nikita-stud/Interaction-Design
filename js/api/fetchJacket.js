@@ -6,7 +6,11 @@ export function fetchJacket(jacket){
 
   const h2 = document.createElement("h2");
   h2.classList.add("details-header");
-  h2.textContent =`${jacket.title} - ${jacket.baseColor}`;
+  h2.textContent =`${jacket.title}`;
+
+  const color = document.createElement("p")
+  color.classList.add("details-color")
+  color.innerHTML =`Jackets Color: <span style="color:${jacket.baseColor}">${jacket.baseColor}</span>`;
 
   const img = document.createElement("img");
   img.classList.add("details-img");
@@ -18,6 +22,7 @@ export function fetchJacket(jacket){
   detailsPrg.textContent =`${jacket.description}`;
 
   const line = document.createElement("hr")
+  line.classList.add("detail-line")
 
   const price = document.createElement("p");
   price.classList.add("details-price");
@@ -45,9 +50,10 @@ export function fetchJacket(jacket){
   container.append(div);
   container.append(img)
   div.append(h2);
+  div.append(price);
+  div.append(color);
+  div.append(discount);
   div.append(detailsPrg);
   div.append(line)
-  div.append(price);
-  div.append(discount);
   div.append(button);
 }
