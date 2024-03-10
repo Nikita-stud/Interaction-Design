@@ -52,6 +52,32 @@ h1, h2, h4, h5, h6,.p-grey{
 .span__empty{
   display: none;
 }
+.breadcrumbs__container{
+  width: fit-content;
+  padding: 10px 50px 10px 35px;
+  background-color: rgb(220, 208, 208);
+  box-shadow: 0 0px 2px 1px rgba(49, 46, 46, 0.211);
+  margin-top: 120px ;
+}
+.breadcrumbs__container ul{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.breadcrumbs__container ul i {
+  display: flex;
+  font-size: 1.3rem;
+  color: var(--black-text);
+  vertical-align: middle;
+}
+.breadcrumbs__container ul li a:hover{
+  text-decoration: underline;
+}
+.breadcrumbs__container ul li a:last-child{
+  font-weight: bold;
+  /* text-decoration: underline;
+  text-underline-offset: 3px; */
+}
 
 /* -----Header All Pages----- */
 header{
@@ -62,9 +88,18 @@ header{
 }
 .dark-header{
   background-color: #313131;
-  text-align: right;
+  text-align: right; 
   display: block;
-  padding: 5px;
+}
+.dark-header-text{
+  font-size: 1rem;
+  padding: 3px;
+  text-align: right; 
+  margin-right: 5px;
+  color: var(--white-text-page);
+}
+.dark-header-text:hover{
+  text-decoration: underline ;
 }
 .lower-header{
   height: 80px;
@@ -77,9 +112,16 @@ nav a{
   color: var(--white-text-page);
   font-size: 1.7rem;
 }
+nav a:hover{
+  opacity: 0.7;
+}
 .logo{
   width: 140px;
   margin: 13px 0 13px 35px;
+}
+.logo:hover{
+  opacity: 0.7;
+  cursor: pointer;
 }
 header label{
   float: right;
@@ -666,15 +708,14 @@ label{
 
 /* ----------------------------Details Page---------------------------- */
 .details__section{
-  margin-top: 100px;
+  margin-top: 40px;
   width: 100%;
   height: 100%;
 }
 .details__container{
   display: flex;
   flex-direction: row-reverse;
-  background-color: #c7bcbc;
-  margin: 20px 0 0px 0;
+  background-color: rgb(220, 208, 208);
   padding: 20px 0px 20px 0px;
 }
 .details__text-container{
@@ -689,14 +730,13 @@ label{
 }
 .details-color{
   font-size: 1.3rem ;
-  margin-top: 25px;
 }
 .details-img{
   display: inline;
   border: 0px black solid;
   box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
   border-radius: 1px;
-  margin: 0px 15px;
+  margin: 0px 15px 0 35px;
   width: 500px;
   height: 400px;
 }
@@ -708,11 +748,15 @@ label{
   font-size: 1.6rem;
   color: var(--black-text);
 }
+.details-price__container{
+  display: flex;
+  gap: 10px;
+}
 .details-price, .details-discount{
   font-size: 1.3rem;
 }
 .details-discount{
-  color: rgb(216, 27, 27);
+  color: var(--black-text);
 }
 .cta-add-details{
   margin: 15px 0;
@@ -910,6 +954,9 @@ label{
     padding-right: 0px;
     margin-right: 32px;
     margin-top: 0px;
+  }
+  .icons a img:hover{
+    opacity: 0.6;
   }
   nav li,a{
     display: inline-block;
