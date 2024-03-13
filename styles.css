@@ -125,6 +125,7 @@ nav a:hover{
   opacity: 0.7;
   cursor: pointer;
 }
+
 header label{
   float: right;
   padding: 22px 35px 22px 3px;
@@ -189,6 +190,21 @@ header label{
   padding: 0 0px 35px 35px ;
   overflow-y: none;
   overflow-x: scroll;
+}
+.horizontal-jackets__row::-webkit-scrollbar{
+  height: 13px;
+}
+.horizontal-jackets__row::-webkit-scrollbar-track{
+  background-color: rgba(89, 97, 107, 0.062);
+  border: 2px solid #b8b8b8 ;
+  margin-left: 35px;
+  border-radius: 8px;
+}
+.horizontal-jackets__row::-webkit-scrollbar-thumb{
+  width: 10vh;
+  cursor: pointer;
+  background-color: rgba(89, 97, 107, 0.69);
+  border-radius: 8px;
 }
 .horizontal-jackets__container{
   transition: all .2s ease-in-out;
@@ -1090,19 +1106,22 @@ label{
     display: none;
   }
   .lower-header{
+    display: block;
     display: flex;
     justify-content: space-between;
     padding: 10px 0px;
     align-items: center;
-    height: 50px;
+    height: 60px;
   }
-  .icons a img{
+  .icons a i{
+    color: var(--white-text-page);
+    font-size: 1.5rem;
     padding-right: 0px;
     margin-right: 32px;
     margin-top: 0px;
   }
-  .icons a img:hover{
-    opacity: 0.6;
+  .icons a i:hover{
+    opacity: 0.8 ;
   }
   nav li,a{
     display: inline-block;
@@ -1441,6 +1460,9 @@ label{
   font-size: var(--size-text-header-footer);
   border: 2px solid var(--white-text-page);
   border-radius: 40px;
+}
+.cta-discover:hover{
+  background: #18181754;
 }
 .cta-add{
   position: absolute;
