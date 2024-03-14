@@ -61,9 +61,51 @@
         <p class="p-grey"><i class="fa-solid fa-location-dot"></i> Grey Wedels Plass 5, 0151 Oslo</p>
         <img src="/pictures/Location-img.jpg" alt="Location of rainydays shop">
       </section>
+
+
+
+
+
       <section class="contact-field">
-        <h2 class="h1-grey">Contact Our Team</h2>
-        <div class="line"></div>
+        <section class="form__container">
+          <form id="form" method="GET">
+            <div class="register__container">
+              <h2>Contact Our Team</h2>
+              <div id="error-registration" class="error-form"></div>
+              <div class="form-names">
+                <div class="input-control">
+                  <label for="name">Name</label>
+                  <input id="name" nam="name" type="text"placeholder="First">
+                  <div id ="form-error"></div>
+                </div>
+                <div class="input-control">
+                  <label for="last-name"><span class="span__empty">!!!Deleted!!!</span></label>
+                  <input id="last-name" name="last-name" type="text" placeholder="Last">
+                  <div id ="form-error"></div>
+                </div>
+              </div>
+              <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" placeholder="addmail@gmail.com">
+                <div id ="form-error"></div>
+              </div>
+              <div class="input-control">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Find stock">
+                <div id ="form-error"></div>
+              </div>
+              <div class="checkbox">
+                <label for="makeAccount">Subscribe to our newsletter</label>
+                <input id="makeAccount" name="makeAccount" type="checkbox" placeholder="*******">
+                <div id ="form-error"></div>
+              </div>
+            </div>
+            <button type="submit" class="cta-submit">Send in</button>
+          </form>
+
+
+
+        <!-- <div class="line"></div>
           <form action="#" method="post">
             <div class="input-section">
               <label for="fname">First name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
@@ -78,7 +120,7 @@
               <textarea name="message" id="message" cols="230" rows="3" placeholder="How may we be of help?"></textarea>
             </div>
             <input type="submit" value="Send in" class="cta-send">
-          </form>
+          </form> -->
       </section>
     </section>
   </main>
