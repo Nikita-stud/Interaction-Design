@@ -15,6 +15,7 @@
   <!-- <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css"> -->
   <script defer src="js/index.js" type="module"></script>
   <script defer src="js/ui/hotjar.js"></script>
+  <script defer src="/js/helper/validateEmail.js"></script>
 </head>
 
 
@@ -105,9 +106,12 @@
     <section class="sign-up">
       <div class="sign-up__content">
         <h6>Sign up to get 25% off your next order</h6>
-        <form action="#" method="post">
-          <input type="email" id="email" name="email" title="Your email" placeholder="Enter your email address" required>
-          <input class="cta-sign-up" type="submit" value="Sign up">
+        <form id="form-main" method="GET">
+          <div id="error-registration" class="error-form"></div>
+            <div class="input-control-main">
+              <input id="email" name="email" type="email" placeholder="myemail@gmail.com">
+              <input class="cta-sign-up" type="submit" value="Sign up">
+            </div>
         </form>
       </div>
     </section>

@@ -49,78 +49,56 @@
 
 
   <main>
-    <section class="question">
-      <h1 class="h1-grey">Got any questions?</h1>
-      <div class="line"></div>
+    <section>
+      <div class="breadcrumbs__container">
+        <ul>
+          <li class="breadcrumbs-house"><a href="/"><i class="fa-solid fa-house"></i></a></li>
+          <li><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="details.html">Contact Page</a></li>
+        </ul>
+      </div>
     </section>
 
     <section class="contact-flex">
-      <section class="map">
-        <h2 class="h1-grey">Our location</h2>
-        <div class="line"></div>
-        <p class="p-grey"><i class="fa-solid fa-location-dot"></i> Grey Wedels Plass 5, 0151 Oslo</p>
-        <img src="/pictures/Location-img.jpg" alt="Location of rainydays shop">
-      </section>
 
+        <div class="map">
+          <h2>Our location</h2>
+          <img src="/pictures/Location-img.jpg" alt="Location of rainydays shop">
+          <p class="address__text"><i class="fa-solid fa-location-dot"></i> Grey Wedels Plass 5, 0151 Oslo</p>
+        </div>
 
-
-
-
-      <section class="contact-field">
         <section class="form__container">
-          <form id="form" method="GET">
-            <div class="register__container">
+          <form id="contact-form" method="GET">
+            <div class="contact__container">
               <h2>Contact Our Team</h2>
               <div id="error-registration" class="error-form"></div>
               <div class="form-names">
                 <div class="input-control">
-                  <label for="name">Name</label>
-                  <input id="name" nam="name" type="text"placeholder="First">
+                  <label for="first-name-contact">Name</label>
+                  <input id="first-name-contact" name="first-name-contact" type="text"placeholder="First">
                   <div id ="form-error"></div>
                 </div>
                 <div class="input-control">
-                  <label for="last-name"><span class="span__empty">!!!Deleted!!!</span></label>
-                  <input id="last-name" name="last-name" type="text" placeholder="Last">
+                  <label for="last-name-contact"><span class="span__empty">!!!Deleted!!!</span></label>
+                  <input id="last-name-contact" name="last-name-contact" type="text" placeholder="Last">
                   <div id ="form-error"></div>
                 </div>
               </div>
               <div class="input-control">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="text" placeholder="addmail@gmail.com">
-                <div id ="form-error"></div>
+                <label for="email-contakt">Email</label>
+                <input id="email-contakt" name="email-contakt" type="text" placeholder="addmail@gmail.com">
               </div>
               <div class="input-control">
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" placeholder="Find stock">
-                <div id ="form-error"></div>
+                <label for="subject-contakt">Subject</label>
+                <input id="subject-contakt" name="subject-contakt" type="text" placeholder="Find stock">
               </div>
-              <div class="checkbox">
-                <label for="makeAccount">Subscribe to our newsletter</label>
-                <input id="makeAccount" name="makeAccount" type="checkbox" placeholder="*******">
-                <div id ="form-error"></div>
+              <div class="input-control">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" cols="230" row="3" placeholder="How may we be of help?"></textarea>
               </div>
+              <button type="submit" class="cta-send">Send in</button>
             </div>
-            <button type="submit" class="cta-submit">Send in</button>
           </form>
-
-
-
-        <!-- <div class="line"></div>
-          <form action="#" method="post">
-            <div class="input-section">
-              <label for="fname">First name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <input type="text" id="fname" name="first-name" placeholder="Please enter" required>
-              <label for="lname">Last name <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <input type="text" id="lname" name="last-name" placeholder="Please enter" required>
-              <label for="mail">Email address <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <input type="email" id="mail" name="email" placeholder="Please enter" required>
-              <label for="subject">Subject <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <input type="text" id="subject" name="subject" placeholder="What is it about?" required>
-              <label for="message">Message <i class="fa-sharp fa-regular fa-asterisk"></i></label>
-              <textarea name="message" id="message" cols="230" rows="3" placeholder="How may we be of help?"></textarea>
-            </div>
-            <input type="submit" value="Send in" class="cta-send">
-          </form> -->
       </section>
     </section>
   </main>
