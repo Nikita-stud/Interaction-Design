@@ -298,6 +298,9 @@ header label{
   box-sizing: border-box;
   background-size: cover;
 }
+.man:hover, .women:hover{
+  transform: scale(1.028);
+}
 .man{
   background-image: url(/pictures/Man.jpg);
   filter: contrast(90%);
@@ -321,6 +324,7 @@ header label{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 /* -----Sign Up Forms----- */
 .input-control textarea{
@@ -1174,19 +1178,19 @@ input::placeholder{
   }
   .gender{
     flex-direction: row;
-    margin:  35px 0;
+    margin:  35px 35px;
+    gap: 35px;
   }
   .gender > * {
     flex: 1;
   }
   .man, .women{
-    width: 760px;
+    max-width: 760px;
     height:493px;
     box-shadow: none;
   }
   .man{
     background-position: center;
-    margin: 0 15px 0 35px;
   }
   .women{
     background-position: top;
@@ -1496,14 +1500,18 @@ input::placeholder{
   font-size: 1.3rem;
 }
 
-.cta-discover{
+.cta-discover, .cta-discover-gender{
   color: var(--white-text-stronger);
   background: #1818173d;
   text-align: center;
-  padding: 2px 15px;
+  padding: 2px 25px;
   font-size: var(--size-text-header-footer);
   border: 2px solid var(--white-text-page);
   border-radius: 40px;
+}
+.cta-discover-gender{
+  margin-top: 10px;
+  padding: 12px 25px;
 }
 
 .cta-add{
