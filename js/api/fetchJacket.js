@@ -43,13 +43,23 @@ export function fetchJacket(jacket){
   const line = document.createElement("hr")
   line.classList.add("detail-line")
 
-  const button = document.createElement("button");
-  button.location = "bag.html";
-  button.classList.add("cta-add-details");
-  button.id = "add";
-  button.textContent ="Add to bag";
+  const buttonsDiv =document.createElement("div")
+  buttonsDiv.classList.add("details-buttons__container")
+
+  const addButton = document.createElement("button");
+  addButton.location = "bag.html";
+  addButton.classList.add("cta-add-details");
+  addButton.id = "add";
+  addButton.innerHTML =`<i class="fa-solid fa-bag-shopping" id="bag__icon-details"></i>`;
   //Here the setAttribute does not work 
-  button.setAttribute("add-id", jacket.id);
+  addButton.setAttribute("add-id", jacket.id);
+
+  const buyButton = document.createElement("button");
+  buyButton.onclick = () => window.location = "checkout.html";
+  buyButton.classList.add("cta-buy-details");
+  buyButton.id = "buy";
+  buyButton.textContent ="Buy now";
+
   
   container.append(div);
   container.append(img)
@@ -60,5 +70,7 @@ export function fetchJacket(jacket){
   div.append(color);
   div.append(detailsPrg);
   div.append(line)
-  div.append(button);
+  div.append(buttonsDiv)
+  buttonsDiv.append(addButton);
+  buttonsDiv.append(buyButton);
 }

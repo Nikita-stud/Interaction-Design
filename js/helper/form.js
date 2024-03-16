@@ -62,7 +62,8 @@ form.onsubmit = (e) =>{
 
     errorRegistration.innerText = messageRegistration.join("," + " ");
     errorShipping.innerText = messageShipping.join("," + " ");
-  }else if(errorRegistration.length || errorShipping.length=== 0) {
-    window.location = "payment.html";
   }
+  // else(messageRegistration.length == 0 || messageShipping.length == 0){
+  //   window.location = "payment.html";
+  // }
 };

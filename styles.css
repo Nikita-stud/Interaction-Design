@@ -789,7 +789,8 @@ input::placeholder{
   background-color: rgb(230, 222, 222);
   text-align: center;
   max-width: 778px;
-  max-height: 921px;
+  height: fit-content;
+  padding: 20px 0;s
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 .bag img{
@@ -799,6 +800,7 @@ input::placeholder{
   margin: 15px 35px 0 35px;
 }
 .bag__content{
+
   padding: 0 15px;
   line-height: 48px;
 }
@@ -806,9 +808,6 @@ input::placeholder{
   clear: both;
   content: "";
   display: table;
-}
-.bag__jackets-title{
-  text-decoration: underline;
 }
 .bag i{
   font-size: large;
@@ -819,10 +818,14 @@ input::placeholder{
   text-align: center;
 }
 .bag__order-amount{
-  border: #313131 2px solid;
-  border-radius: 20px;
+  border: #313131 1.5px solid;
+  background-color: var(--white-text-stronger);
   display: inline;
-  padding: 8px 1px 8px 8px;
+  padding: 6px;
+
+  font-size: 1.2rem;
+  color: var(--black-text);
+  border-radius: 2px;
 }
 
 .bag__jackets-price{
@@ -850,15 +853,20 @@ input::placeholder{
 }
 
 /* ----------------------------Details Page---------------------------- */
+.details__breadcrumbs{
+  margin-top: 135px;
+}
 .details__section{
-  margin-top: 40px;
+  margin-top: 50px;
   width: 100%;
   height: 100%;
 }
 .details__container{
+  margin: 0 35px;
   display: flex;
   flex-direction: row-reverse;
   background-color: rgb(220, 208, 208);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   padding: 20px 0px 20px 0px;
 }
 .details__text-container{
@@ -905,7 +913,7 @@ input::placeholder{
 .details-discount{
   color: var(--black-text);
 }
-.cta-add-details{
+.cta-add-details, .cta-buy-details{
   margin: 15px 0;
   background-color: var(--black-text);
   color: var(--white-text-page);
@@ -915,6 +923,16 @@ input::placeholder{
   border-radius: 10px;
   font-size: 1.3rem;
 }
+.details-buttons__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+#bag__icon-details{
+  font-size: 1.4rem;
+}
+
 
 /*----- DEALS PAGE --------*/
 .header-top{
@@ -990,8 +1008,9 @@ input::placeholder{
   }
   /* ----------------------------Details Page---------------------------- */
   .details__container{
+
     flex-direction: column-reverse;
-    margin-bottom: 50px;
+    margin: 80px 0 50px 0;
   }
   .details__text-container{
     padding: 20px;
@@ -1002,12 +1021,24 @@ input::placeholder{
   }
   .details-img{
     margin: 0 auto;
+    max-width: 400px;
+  }
+  .details-price__container{
+    display: inline;
   }
   .details-price, .details-discount{
-    text-align: center;
+    margin: 10px auto;
+    font-size: 1.8rem;
   }
   .cta-add-details{
     align-self: center;
+    display: none;
+  }
+  /* ----------------------------My Bag Page---------------------------- */
+
+  .order-summary{
+    width: 100%;
+    max-height: 660px;
   }
 }
 
@@ -1302,12 +1333,22 @@ input::placeholder{
   min-width: 688px;
   max-height: 521px;
 }
+.bag h1{
+  margin-bottom: 20px;
+}
 .bag img{
   float: left;
   margin: 35px 35px;
 }
+.order-summary{
+  width: 100%;
+  max-height: 660px;
+}
 .bag__content{
-  margin-top: 30px;
+  border: 1px solid var(--black-text);
+  border-left: 0px;
+  border-right: 0px;
+  margin-top: 20px;
   line-height: 40px;
 }
 
@@ -1414,6 +1455,10 @@ input::placeholder{
     max-width: 350px;
     margin-bottom: 90px;
   }
+  /*----- Details page -----*/
+  .details-img{
+    max-width: 280px;
+  }
 }
 
 
@@ -1439,10 +1484,6 @@ input::placeholder{
   max-width: 500px;
   border-radius: 10px;
   font-size: 1.3rem;
-}
-.cta-submit:hover, .cta-send:hover{
-  cursor: pointer;
-  background-color: rgba(24, 20, 20, 0.854);
 }
 .cta-send{
   display: flex;
@@ -1476,10 +1517,10 @@ input::placeholder{
   border-radius: 30px;
   font-size: 1.0625rem;
 }
-.cta-add:hover, .cta-add-details:hover{
+.cta-add:hover, .cta-add-details:hover, .cta-buy-details:hover,.cta-submit:hover, .cta-send:hover{
   cursor: pointer;
   color: var(--white-text-page);
-  background-color: hsl(0, 4%, 56%);
+  background-color: hsl(0, 3%, 31%);
 }
 .cta-order{
   display: inline;
@@ -1583,14 +1624,14 @@ input[type="radio"]{
   background-color: #FFF;
   color: var(--grey);
   padding: 5px 30px;
-  font-size: 1.0625rem;
-  border: 3px solid var(--grey);
-  border-radius: 40px;
+  font-size: 1.2rem;
+  border: 1.5px solid var(--grey);
+  border-radius: 2px;
 }
 .btn-size:hover{
   background-color: rgba(215, 215, 215, 0.648);
   color: rgb(71, 71, 71);
-  border: 4px solid var(--grey);
+  border: 2px solid var(--grey);
   cursor: pointer;
 }
 input[type="radio"]:checked + label{
@@ -1599,10 +1640,11 @@ input[type="radio"]:checked + label{
 }
 .cta_quantity{
   background-color: #FFF;
-  padding: 5px 10px;
-  border: 3px solid var(--grey);
-  border-radius: 20px;
-  font-size: 1rem;
+  margin-left: 25px ;
+  padding: 5px 15px 5px 5px;
+  border: 2px solid var(--grey);
+  border-radius: 2px;
+  font-size: 1.3rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 .error{
