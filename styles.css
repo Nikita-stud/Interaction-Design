@@ -1478,13 +1478,12 @@ input::placeholder{
   place-items: center;
   background-color: var(--black-text);
   color: var(--white-text-page);
-  padding: 10px 0px;
   width: 100%;
   margin-top: 30px;
-  max-width: 500px;
   border-radius: 10px;
   font-size: 1.3rem;
 }
+
 .cta-send{
   display: flex;
   justify-content: center;
@@ -1506,9 +1505,7 @@ input::placeholder{
   border: 2px solid var(--white-text-page);
   border-radius: 40px;
 }
-.cta-discover:hover{
-  background: #18181754;
-}
+
 .cta-add{
   position: absolute;
   bottom: 0px;
@@ -1517,7 +1514,7 @@ input::placeholder{
   border-radius: 30px;
   font-size: 1.0625rem;
 }
-.cta-add:hover, .cta-add-details:hover, .cta-buy-details:hover,.cta-submit:hover, .cta-send:hover{
+.cta-add:hover, .cta-add-details:hover, .cta-buy-details:hover,.cta-submit:hover, .cta-send:hover, .cta-continue:hover, .cta-discover:hover{
   cursor: pointer;
   color: var(--white-text-page);
   background-color: hsl(0, 3%, 31%);
@@ -1538,14 +1535,19 @@ input::placeholder{
   border: 3px solid var(--grey);
   border-radius: 40px;
 }
-.cta-continue{
-  background-color: #F2F2F2;
-  color: var(--grey);
-  padding: 5px 63.5px;
-  font-size: 1.0625rem;
-  border: 2px solid var(--grey);
-  border-radius: 40px;
-}
+ .cta-continue{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--black-text);
+  color: var(--white-text-page);
+  padding: 15px 0px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-size: 1.3rem;
+} 
 .cta-checkout{
   display: block;
   text-align: center;
@@ -1585,21 +1587,6 @@ input::placeholder{
   border: 1px solid var(--white-text-stronger);
   background-color: var(--grey);
 }
-/* .cta-send{
-  color: var(--grey);
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
-  margin: 20px 0px;
-  padding: 5px 65px;
-  font-size: 1.0625rem;
-  border: 2px solid var(--grey);
-  border-radius: 40px;
-}
-.cta-send:hover{
-  background-color: rgba(193, 188, 188, 0.429);
-  border: 2px solid rgb(97, 97, 97);
-  cursor: pointer;
-} */
 .line, .line-bottom{
   background-color: var(--grey);
   width: 100%;
