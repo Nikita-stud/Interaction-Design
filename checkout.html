@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Montserrat:wght@100&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css">
-  <script defer src="js/ui/hotjar.js"></script>
-  <script defer src="/js/helper/validateEmail.js"></script>
+  <script src="js/ui/hotjar.js"></script>
+  <script defer src="/js/helper/form.js"></script>
 </head>
 
 
@@ -42,7 +42,7 @@
         <!-- Some Icons from Font Awesome and other websites did not work for some reason, had to use img from Figma, wrote description for blind people to understand the images -->
         <div class="icons">
           <a href="#"><i class="fa-solid fa-user"></i></a>
-          <a href="bag.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          <a href="bag.html"><i class="fa-solid fa-bag-shopping" id="bagIcon"></i></a>
           <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </section>
@@ -64,6 +64,7 @@
     </section>
 
     <section class="form__container">
+      
         <form id="form" method="GET">
           <div class="register__container">
             <h1><i class="fa-solid fa-1"></i>. Registration</h1>
@@ -72,28 +73,23 @@
               <div class="input-control">
                 <label for="name">Name</label>
                 <input id="name" nam="name" type="text"placeholder="First">
-                <div id ="form-error"></div>
               </div>
               <div class="input-control">
                 <label for="last-name"><span class="span__empty">!!!Deleted!!!</span></label>
-                <input id="last-name" name="last-name" type="text" placeholder="Last">
-                <div id ="form-error"></div>
+                <input id="last-name" name="last-name" type="text" placeholder="Last" >
               </div>
             </div>
             <div class="input-control">
               <label for="email">Email</label>
               <input id="email" name="email" type="text" placeholder="addmail@gmail.com">
-              <div id ="form-error"></div>
             </div>
             <div class="input-control">
               <label for="password">Password</label>
               <input id="password" name="password" type="password" placeholder="*******">
-              <div id ="form-error"></div>
             </div>
             <div class="checkbox">
               <label for="makeAccount">Subscribe to our newsletter</label>
               <input id="makeAccount" name="makeAccount" type="checkbox" placeholder="*******">
-              <div id ="form-error"></div>
             </div>
           </div>
 
@@ -103,26 +99,22 @@
             <div class="input-control">
               <label for="country">Country</label>
               <input id="country" name="country" type="text" placeholder="Norway">
-              <div id ="form-error"></div>
             </div>
             <div class="input-control">
               <label for="address">Street address</label>
               <input id="address" name="address" type="text" placeholder="Myhome 1">
-              <div id ="form-error"></div>
             </div>
             <div class="form-names">
               <div class="input-control">
                 <label for="city">City</label>
                 <input id="city" nam="city" type="text"placeholder="Oslo">
-                <div id ="form-error"></div>
               </div>
               <div class="input-control">
                 <label for="postal-code">Postal code</label>
                 <input id="postal-code" name="postal-code" type="text" placeholder="1030">
-                <div id ="form-error"></div>
               </div>
             </div>
-              <button type="submit" class="cta-submit">Continue to order</button>
+              <button type="submit" class="cta-submit" id="submit">Continue to order</button>
           </div>
         </form>
 

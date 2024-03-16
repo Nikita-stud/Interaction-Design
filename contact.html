@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&family=Montserrat:wght@100&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css">
+  <script defer src="js/helper/validateContactForm.js"></script>
   <script defer src="js/ui/hotjar.js"></script>
 </head>
 
@@ -41,7 +42,7 @@
       <!-- Some Icons from Font Awesome and other websites did not work for some reason, had to use img from Figma, wrote description for blind people to understand the images -->
       <div class="icons">
         <a href="#"><i class="fa-solid fa-user"></i></a>
-        <a href="bag.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="bag.html"><i class="fa-solid fa-bag-shopping" id="bagIcon"></i></a>
         <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
       </div>
     </section>
@@ -68,38 +69,35 @@
         </div>
 
         <section class="form__container">
-          <form id="contact-form" method="GET">
+          <form id="form-contact" method="GET">
             <div class="contact__container">
               <h2>Contact Our Team</h2>
-              <div id="error-registration" class="error-form"></div>
-              <div class="form-names">
-                <div class="input-control">
-                  <label for="first-name-contact">Name</label>
-                  <input id="first-name-contact" name="first-name-contact" type="text"placeholder="First">
-                  <div id ="form-error"></div>
-                </div>
-                <div class="input-control">
-                  <label for="last-name-contact"><span class="span__empty">!!!Deleted!!!</span></label>
-                  <input id="last-name-contact" name="last-name-contact" type="text" placeholder="Last">
-                  <div id ="form-error"></div>
-                </div>
+              <div class="input-control">
+                <label for="full-name">Full name</label>
+                <input id="full-name" name="full-name" type="text"placeholder="First and Last">
+                <div id="error-full-name" class="error-contact"></div>
               </div>
               <div class="input-control">
-                <label for="email-contakt">Email</label>
-                <input id="email-contakt" name="email-contakt" type="text" placeholder="addmail@gmail.com">
+                <label for="email-contact">Email</label>
+                <input id="email-contact" name="email-contact" type="text" placeholder="addmail@gmail.com">
+                <div id="error-email" class="error-contact"></div>
               </div>
               <div class="input-control">
-                <label for="subject-contakt">Subject</label>
-                <input id="subject-contakt" name="subject-contakt" type="text" placeholder="Find stock">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Find stock">
+                <div id="error-subject" class="error-contact"></div>
               </div>
               <div class="input-control">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" cols="230" row="3" placeholder="How may we be of help?"></textarea>
+                <div id="error-message" class="error-contact"></div>
               </div>
               <button type="submit" class="cta-send">Send in</button>
             </div>
           </form>
       </section>
+
+
     </section>
   </main>
 
