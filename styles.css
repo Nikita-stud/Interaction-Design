@@ -1555,10 +1555,10 @@ input::placeholder{
    }
   /*----- Checkout page -----*/
   .order__container{
-    width: 280px;
+    width: 320px;
   }
   .register__container, .shipping__container{
-    width: 300px;
+    width: 320px;
     height: 600px;
   }
 
