@@ -1558,7 +1558,8 @@ input::placeholder{
     width: 280px;
   }
   .register__container, .shipping__container{
-    width: 280px;
+    width: 300px;
+    height: 600px;
   }
 
   /*----- Payment page -----*/
