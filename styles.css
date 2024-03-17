@@ -600,7 +600,7 @@ footer nav a {
 }
 
 /* -----Checkout Page----- */
-.register__container, .payment__container, .shipping__container{
+.register__container, .shipping__container{
   width: 500px;
   height: 500px;
   padding: 35px;
@@ -712,8 +712,15 @@ input::placeholder{
 }
 
 
-
-
+/*----- Payment Page -----*/
+.payment__container{
+  width: 500px;
+  height: 500px;
+  padding: 35px;
+  background-color: rgb(230, 222, 222);
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
 
 
 
@@ -1469,6 +1476,11 @@ input::placeholder{
     height: 550px;
     width: 450px;
   }
+  /*----- Payment page -----*/
+  .payment__container{
+    width: 380px;
+  }
+  
 }
 
 
@@ -1521,6 +1533,10 @@ input::placeholder{
    }
   /*----- Checkout page -----*/
 
+  /*----- Payment page -----*/
+  .payment__container{
+    width: 280px;
+  }
   /*----- List of jackets page -----*/
    .list-jackets{
     justify-content: space-around;
