@@ -407,7 +407,9 @@ header label{
 input:valid, textarea:valid{
   background-color: #3cc95892;
 }
-
+/* input:invalid, textarea:invalid{
+  background-color: #d8212192;
+} */
 
 
 
@@ -1643,6 +1645,19 @@ input::placeholder{
   margin-top: 30px;
   font-size: 1.3rem;
 } 
+
+.cta-continue-back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  background-color: var(--black-text);
+  color: var(--white-text-page);
+  padding: 15px 0px;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
 .cta-checkout{
   display: block;
   text-align: center;

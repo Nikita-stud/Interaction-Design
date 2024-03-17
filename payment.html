@@ -72,35 +72,28 @@
             <div class="form-names">
               <div class="input-control">
                 <label for="card-holder-name">Name</label>
-                <input id="name" name="card-holder-name" type="text"placeholder="First">
-                <div id ="form-error"></div>
+                <input id="name" name="card-holder-name" type="text"placeholder="First" enterkeyhint="next" autocomplete="on" required minlength="2">
               </div>
               <div class="input-control">
                 <label for="card-holder-last-name"><span class="span__empty">!!!Deleted!!!</span></label>
-                <input id="last-name" name="card-holder-last-name" type="text" placeholder="Last">
-                <div id ="form-error"></div>
+                <input id="last-name" name="card-holder-last-name" type="text" placeholder="Last" enterkeyhint="next" autocomplete="on" required minlength="2">
               </div>
             </div>
-
             <div class="input-control">
               <label for="card-number">Card number</label>
-              <input id="email" name="email" type="text" placeholder="1234 5678 9123 4567">
-              <div id ="form-error"></div>
+              <input id="email" name="email" type="text" placeholder="1234 5678 9123 4567" enterkeyhint="next" autocomplete="on" required minlength="16" type="number" min="0" maxlength="16">
             </div>
-
             <div class="form-names">
               <div class="input-control">
                 <label for="exp-date">Expiry date</label>
-                <input id="exp-date" name="exp-date" type="text" placeholder="01/25">
-                <div id ="form-error"></div>
+                <input id="exp-date" name="exp-date" type="text" placeholder="01/25" enterkeyhint="next" autocomplete="on" required minlength="4" type="number" maxlength="4">
               </div>
               <div class="input-control">
                 <label for="cvc">CVC</label>
-                <input id="cvc" name="cvc" type="text" placeholder="***">
-                <div id ="form-error"></div>
+                <input id="cvc" name="cvc" type="text" placeholder="***" enterkeyhint="next" autocomplete="on" required maxlength="3" minlength="3" type="number">
               </div>
             </div>
-            <button type="submit" class="cta-continue">Finish Ordering</button>
+            <a href="checkous-success.html" class="cta-continue">Finish Ordering</a>
           </div>
         </form>
     </section>
