@@ -66,31 +66,24 @@
           <h2>Our location</h2>
           <img src="/pictures/Location-img.jpg" alt="Location of rainydays shop">
           <p class="address__text"><i class="fa-solid fa-location-dot"></i> Grey Wedels Plass 5, 0151 Oslo</p>
+          <p class="address__text"><i class="fa-solid fa-phone"></i>+47 783 83 88</p>
         </div>
 
-        <section class="form__container">
+        <section class="form__container" id="formContainer">
           <form id="form-contact" method="GET">
             <div class="contact__container">
               <h2>Contact Our Team</h2>
               <div class="input-control">
                 <label for="full-name">Full name</label>
-                <input id="full-name" name="full-name" type="text"placeholder="First and Last">
-                <div id="error-full-name" class="error-contact"></div>
+                <input id="full-name" name="full-name" type="text" inputmode="text" enterkeyhint="next" autocomplete="on" placeholder="First and Last" required minlength="2" >
               </div>
               <div class="input-control">
                 <label for="email-contact">Email</label>
-                <input id="email-contact" name="email-contact" type="text" placeholder="addmail@gmail.com">
-                <div id="error-email" class="error-contact"></div>
-              </div>
-              <div class="input-control">
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" placeholder="Find stock">
-                <div id="error-subject" class="error-contact"></div>
+                <input id="email-contact" name="email-contact" type="text" placeholder="addmail@gmail.com" required required minlength="9" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
               </div>
               <div class="input-control">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" cols="230" row="3" placeholder="How may we be of help?"></textarea>
-                <div id="error-message" class="error-contact"></div>
+                <textarea id="message" name="message" cols="230" row="3" placeholder="How may we be of help?" required minlength="10"></textarea>
               </div>
               <button type="submit" class="cta-send">Send in</button>
             </div>

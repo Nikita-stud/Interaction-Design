@@ -15,7 +15,7 @@
   <!-- <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css"> -->
   <script defer src="js/index.js" type="module"></script>
   <script defer src="js/ui/hotjar.js"></script>
-  <script defer src="/js/helper/validateEmail.js"></script>
+  <script defer src="/js/helper/validateSignUp.js"></script>
 </head>
 
 
@@ -108,18 +108,21 @@
     <div class="line"></div>
 
     <section class="sign-up">
-      <div class="sign-up__content">
+      <div class="sign-up__content" id="signHeader">
         <h6>Sign up to get 25% off your next order</h6>
-        <form id="form-main" method="GET" >
-          <div id="error-registration" class="error-form"></div>
+      </div>
+
+      <div class="sign-up-form" id="signUpForm">
+        <form id="formMain" method="GET" >
             <div class="input-control-main">
-              <label for="email"><span class="span__empty">!!!Deleted!!!</span></label>
-              <input id="email" name="email" type="email" placeholder="myemail@gmail.com" required>
-              <input class="cta-sign-up" type="submit" value="Sign up">
+              <label for="email-contact"><span class="span__empty">!!!Deleted!!!</span></label>
+              <input id="email-contact" name="email-contact" type="text" placeholder="myemail@gmail.com" required required minlength="9" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             </div>
+            <button class="cta-sign-up" type="submit" value="Sign up">Sign up</button>
         </form>
       </div>
     </section>
+
     <div class="line"></div>
   </main>
 
