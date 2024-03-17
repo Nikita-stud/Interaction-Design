@@ -608,12 +608,6 @@ footer nav a {
   border-radius: 4px;
   font-size: 1.2rem;
 }
-.form__container{
-  padding: 0 35px;
-  display: flex;
-  justify-content: space-around;
-  gap: 30px;
-}
 #form{
   display: grid;
   grid-template-rows: auto auto;
@@ -682,20 +676,7 @@ input::placeholder{
   font-size: 9px;
   height: 13px;
 }
-.order__container{
-  position: static;
-  align-self: flex-start;
-  margin-top: 50px;
-  max-height: 1000px;
-  padding: 35px 10px;
-  background-color: rgba(230, 222, 222, 0.146);
-  border: 2px solid rgb(230, 222, 222);
-  border-radius: 4px;
-  max-width: 400px;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-}
+
 .order__container h3{
   font-size: 2.4rem;
 }
@@ -1064,7 +1045,6 @@ input::placeholder{
   }
   /* ----------------------------Details Page---------------------------- */
   .details__container{
-
     flex-direction: column-reverse;
     margin: 80px 0 50px 0;
   }
@@ -1091,10 +1071,27 @@ input::placeholder{
     display: none;
   }
   /* ----------------------------My Bag Page---------------------------- */
-
   .order-summary{
     width: 100%;
     max-height: 660px;
+  }
+
+  /* ----------------------------Checkout Page---------------------------- */
+  .form__container{
+   margin-top: 130px;
+  }
+  .order__container{
+    margin: 50px auto;
+    margin-top: 50px;
+    height: fit-content;
+    padding: 35px 10px;
+    background-color: rgba(230, 222, 222, 0.146);
+    border: 2px solid rgb(230, 222, 222);
+    border-radius: 4px;
+    width: 500px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
   }
 }
 
@@ -1419,6 +1416,24 @@ input::placeholder{
   padding-left: 35px;
   margin-top: 10px;
 }
+.form__container{
+  padding: 0 35px;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+.order__container{
+  margin-top: 50px;
+  height: fit-content;
+  padding: 35px 10px;
+  background-color: rgba(230, 222, 222, 0.146);
+  border: 2px solid rgb(230, 222, 222);
+  border-radius: 4px;
+  max-width: 400px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
 
 /*----- Checkout Success Page -----*/
 .success{
@@ -1465,6 +1480,12 @@ input::placeholder{
   .order-field{
     width: 400px;
   }
+  .order__container{
+    width: 400px;
+  }
+  .register__container, .shipping__container{
+    width: 400px;
+  }
   /*----- Contact page -----*/
   .map{
     width: 450px;
@@ -1478,6 +1499,7 @@ input::placeholder{
   }
   /*----- Payment page -----*/
   .payment__container{
+    margin-top: 90px;
     width: 380px;
   }
   
@@ -1532,9 +1554,16 @@ input::placeholder{
     display: none;
    }
   /*----- Checkout page -----*/
+  .order__container{
+    width: 280px;
+  }
+  .register__container, .shipping__container{
+    width: 280px;
+  }
 
   /*----- Payment page -----*/
   .payment__container{
+    margin-top: 90px;
     width: 280px;
   }
   /*----- List of jackets page -----*/
