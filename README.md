@@ -2,7 +2,7 @@
 
 My very first webpage, this is where it all started. Having just acquired some Design, CSS, HTML knowledge the Norwegian University Noroff mad its first task ready. Having a choice between 3 different ideas and predisposed images, I went with making a website for jackets. At first, this website did not contain any JS nor error or loading displays. Eventually this website turned into something more, having to implement more of the knowledge acquired along the academic path.
 
-![Image of the upper part of the website](./pictures/rainy-days.jpg)
+![Image of the upper part of the website](./pictureGit/rainy-days.jpg)
 
 Explore the website by visiting the link - [RainyDays](https://rainjackets.netlify.app/)
 
