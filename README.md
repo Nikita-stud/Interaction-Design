@@ -97,7 +97,7 @@ Then open the address it shows in your browser.
 - [x] Jackets from the Noroff API
 - [x] Loading and error messages
 - [x] Updated to version 2 of the Noroff API
-- [ ] Show the saved jackets on the bag page
+- [ ] Show the added jackets on the bag page
 
 ## Contributing
 
