@@ -6,7 +6,7 @@ export function fetchJacket(jacket){
 
   const img = document.createElement("img");
   img.classList.add("details-img");
-  img.src =`${jacket.image}`;
+  img.src =`${jacket.image.url}`;
   img.alt = `${jacket.title}`;
 
   const h2 = document.createElement("h2");

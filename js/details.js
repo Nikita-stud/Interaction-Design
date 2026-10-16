@@ -3,6 +3,7 @@ import {catchAndDisplay} from "./ui/catchAndDisplay.js";
 import {getQueryParam} from "./helper/getQueryParam.js";
 import { fetchJacket } from "./api/fetchJacket.js";
 import { handleClick } from "./helper/handleClick.js";
+import { fetchData } from "./api/fetchData.js";
 
 const detailsContainer = document.querySelector(".details__container");
 
@@ -14,8 +15,7 @@ if(!id){
 
 async function getJacket(){
   try{
-    const fetched = await fetch(jacketUrl);
-    const results = await fetched.json();
+    const results = await fetchData(jacketUrl);
 
     detailsContainer.innerHTML ="";
 

@@ -1048,6 +1048,10 @@ input::placeholder{
     flex-direction: column-reverse;
     margin: 80px 0 50px 0;
   }
+  .details__container .error{
+    width: auto;
+    margin: 0 20px;
+  }
   .details__text-container{
     padding: 20px;
     display: flex;
@@ -1231,11 +1235,13 @@ input::placeholder{
   }
   .gender{
     flex-direction: row;
+    justify-content: center;
     margin:  35px 35px;
     gap: 35px;
   }
   .gender > * {
     flex: 1;
+    max-width: 760px;
   }
   .man, .women{
     max-width: 760px;
@@ -1532,6 +1538,9 @@ input::placeholder{
   .horizontal-jackets__row{
     margin: 0 0px 30px 0;
     padding: 0 0px 20px 25px;
+  }
+  .horizontal-jackets__row .error{
+    width: calc(100% - 25px);
   }
   .sign-up{
     display: none;
